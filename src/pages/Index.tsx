@@ -15,12 +15,8 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
-        <section id="projects-full" className="border-t border-border">
-          <div className="section-container">
-            <ProjectsSection />
-            <SpotlightSection />
-          </div>
-        </section>
+        <ProjectsSection />
+        <SpotlightSection />
         <ResumeSection />
         <ChatSection />
         <ContactSection />
