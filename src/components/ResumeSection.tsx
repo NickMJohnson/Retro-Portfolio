@@ -42,15 +42,17 @@ const education: TimelineItem[] = [
 const TimelineBlock = ({ items, label }: { items: TimelineItem[]; label: string }) => (
   <div>
     <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-6">{label}</h3>
-    <div className="space-y-8 relative">
-      <div className="absolute left-[7px] top-2 bottom-2 w-px bg-border" />
+    <div className="space-y-6 relative">
+      <div className="absolute left-[7px] top-2 bottom-2 w-px gradient-bg opacity-30" />
       {items.map((item, i) => (
         <ScrollReveal key={i} delay={i * 0.08}>
           <div className="relative pl-8">
-            <div className="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full border-2 border-primary bg-background" />
+            <div className="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full gradient-bg shadow-lg" style={{
+              boxShadow: "0 0 12px hsla(var(--primary) / 0.4)"
+            }} />
             <p className="text-xs text-muted-foreground font-mono mb-1">{item.period}</p>
             <h4 className="font-medium text-foreground">{item.title}</h4>
-            <p className="text-sm text-primary/80 mb-1">{item.organization}</p>
+            <p className="text-sm text-primary mb-1">{item.organization}</p>
             <p className="text-sm text-muted-foreground">{item.description}</p>
           </div>
         </ScrollReveal>
@@ -61,21 +63,21 @@ const TimelineBlock = ({ items, label }: { items: TimelineItem[]; label: string 
 
 export const ResumeSection = () => {
   return (
-    <section id="resume" className="border-t border-border">
+    <section id="resume">
       <div className="section-container">
         <ScrollReveal>
-          <h2 className="section-heading">Resume</h2>
+          <h2 className="section-heading"><span className="gradient-text">Resume</span></h2>
           <p className="section-subheading">My experience and education at a glance.</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
           <div className="flex gap-3 mb-12">
-            <Button asChild>
+            <Button asChild className="rounded-full gradient-bg border-0 text-white hover:opacity-90">
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                 <FileText className="w-4 h-4 mr-2" /> View Resume
               </a>
             </Button>
-            <Button variant="outline" asChild>
+            <Button variant="outline" asChild className="rounded-full backdrop-blur-sm bg-white/10 border-white/20 hover:bg-white/20">
               <a href="/resume.pdf" download>
                 <Download className="w-4 h-4 mr-2" /> Download PDF
               </a>
@@ -83,9 +85,11 @@ export const ResumeSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-16">
-          <TimelineBlock items={experience} label="Experience" />
-          <TimelineBlock items={education} label="Education" />
+        <div className="glass-card">
+          <div className="grid md:grid-cols-2 gap-16">
+            <TimelineBlock items={experience} label="Experience" />
+            <TimelineBlock items={education} label="Education" />
+          </div>
         </div>
       </div>
     </section>

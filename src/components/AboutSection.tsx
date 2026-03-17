@@ -8,15 +8,15 @@ const skills = [
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="border-t border-border">
+    <section id="about">
       <div className="section-container">
         <ScrollReveal>
-          <h2 className="section-heading">About Me</h2>
+          <h2 className="section-heading"><span className="gradient-text">About Me</span></h2>
           <p className="section-subheading">A bit about my background and what I do.</p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-5 gap-12">
-          <div className="md:col-span-3 space-y-4">
+        <div className="grid md:grid-cols-5 gap-8">
+          <div className="md:col-span-3 glass-card space-y-4">
             <ScrollReveal>
               <p className="text-foreground/80 leading-relaxed">
                 I'm a software engineer and AI builder studying at Cornell University. I love working at the
@@ -41,11 +41,13 @@ export const AboutSection = () => {
 
           <div className="md:col-span-2">
             <ScrollReveal delay={0.15}>
-              <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">Skills & Tools</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span key={skill} className="tag-chip">{skill}</span>
-                ))}
+              <div className="glass-card">
+                <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">Skills & Tools</h3>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((skill) => (
+                    <span key={skill} className="tag-chip">{skill}</span>
+                  ))}
+                </div>
               </div>
             </ScrollReveal>
           </div>

@@ -4,14 +4,14 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center relative">
+    <section className="min-h-screen flex items-center relative overflow-hidden">
       <div className="section-container w-full">
         <ScrollReveal>
           <p className="text-sm font-medium text-primary tracking-widest uppercase mb-4">Hello, I'm</p>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-4">
-            Your Name
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4">
+            <span className="gradient-text">Your Name</span>
           </h1>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
@@ -21,10 +21,10 @@ export const HeroSection = () => {
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
           <div className="flex gap-3">
-            <Button asChild>
+            <Button asChild className="rounded-full gradient-bg border-0 text-white hover:opacity-90 px-6">
               <a href="#projects">View Projects</a>
             </Button>
-            <Button variant="outline" asChild>
+            <Button variant="outline" asChild className="rounded-full px-6 backdrop-blur-sm bg-white/10 border-white/20 hover:bg-white/20">
               <a href="#resume">Resume</a>
             </Button>
           </div>
@@ -40,11 +40,19 @@ export const HeroSection = () => {
         </ScrollReveal>
       </div>
 
-      {/* Geometric accent */}
-      <div className="absolute top-1/2 right-[10%] -translate-y-1/2 hidden lg:block">
-        <div className="w-64 h-64 rounded-full border border-border opacity-20" />
-        <div className="absolute top-8 left-8 w-48 h-48 rounded-full border border-primary/20" />
-        <div className="absolute top-16 left-16 w-32 h-32 rounded-full bg-primary/5" />
+      {/* Floating glass orbs */}
+      <div className="absolute top-1/2 right-[8%] -translate-y-1/2 hidden lg:block pointer-events-none">
+        <div className="w-72 h-72 rounded-full animate-float" style={{
+          background: "linear-gradient(135deg, hsla(var(--gradient-start) / 0.15), hsla(var(--gradient-mid) / 0.1))",
+          backdropFilter: "blur(40px)",
+          border: "1px solid hsla(0 0% 100% / 0.1)",
+        }} />
+        <div className="absolute top-12 left-12 w-48 h-48 rounded-full animate-float-slow" style={{
+          background: "linear-gradient(225deg, hsla(var(--gradient-mid) / 0.2), hsla(var(--gradient-end) / 0.1))",
+          backdropFilter: "blur(30px)",
+          border: "1px solid hsla(0 0% 100% / 0.08)",
+        }} />
+        <div className="absolute top-24 left-24 w-28 h-28 rounded-full animate-float-slower gradient-bg opacity-20 blur-sm" />
       </div>
     </section>
   );
