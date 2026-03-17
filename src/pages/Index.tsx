@@ -11,6 +11,7 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <>
+      <div className="mesh-gradient" />
       <Header />
       <main>
         <HeroSection />

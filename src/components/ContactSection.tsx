@@ -9,7 +9,6 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder — wire up your form handler
     console.log("Contact form submitted:", form);
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
@@ -17,23 +16,23 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="border-t border-border">
+    <section id="contact">
       <div className="section-container">
         <ScrollReveal>
-          <h2 className="section-heading">Contact</h2>
+          <h2 className="section-heading"><span className="gradient-text">Contact</span></h2>
           <p className="section-subheading">Get in touch — I'd love to hear from you.</p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-3xl">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
           <ScrollReveal delay={0.1}>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="glass-card space-y-4">
               <input
                 type="text"
                 placeholder="Name"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+                className="w-full rounded-xl border border-white/15 bg-white/5 backdrop-blur-sm px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
               />
               <input
                 type="email"
@@ -41,7 +40,7 @@ export const ContactSection = () => {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+                className="w-full rounded-xl border border-white/15 bg-white/5 backdrop-blur-sm px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
               />
               <textarea
                 placeholder="Message"
@@ -49,16 +48,16 @@ export const ContactSection = () => {
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
                 rows={4}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring resize-none"
+                className="w-full rounded-xl border border-white/15 bg-white/5 backdrop-blur-sm px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none transition-all"
               />
-              <Button type="submit" disabled={submitted}>
+              <Button type="submit" disabled={submitted} className="rounded-full gradient-bg border-0 text-white hover:opacity-90">
                 {submitted ? "Sent!" : <><Send className="w-3.5 h-3.5 mr-2" /> Send Message</>}
               </Button>
             </form>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="space-y-4">
+            <div className="glass-card space-y-4">
               <p className="text-sm text-muted-foreground">
                 You can also reach me directly through these channels:
               </p>
@@ -67,7 +66,10 @@ export const ContactSection = () => {
                   href="mailto:you@example.com"
                   className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-muted-foreground" /> you@example.com
+                  <div className="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white">
+                    <Mail className="w-3.5 h-3.5" />
+                  </div>
+                  you@example.com
                 </a>
                 <a
                   href="https://github.com"
@@ -75,7 +77,10 @@ export const ContactSection = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors"
                 >
-                  <Github className="w-4 h-4 text-muted-foreground" /> GitHub
+                  <div className="w-8 h-8 rounded-full bg-white/10 dark:bg-white/5 backdrop-blur-sm flex items-center justify-center">
+                    <Github className="w-3.5 h-3.5" />
+                  </div>
+                  GitHub
                 </a>
                 <a
                   href="https://linkedin.com"
@@ -83,7 +88,10 @@ export const ContactSection = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors"
                 >
-                  <Linkedin className="w-4 h-4 text-muted-foreground" /> LinkedIn
+                  <div className="w-8 h-8 rounded-full bg-white/10 dark:bg-white/5 backdrop-blur-sm flex items-center justify-center">
+                    <Linkedin className="w-3.5 h-3.5" />
+                  </div>
+                  LinkedIn
                 </a>
               </div>
             </div>
