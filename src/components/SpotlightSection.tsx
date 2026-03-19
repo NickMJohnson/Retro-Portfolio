@@ -60,11 +60,11 @@ const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
       <div className="browser-dot bg-green-400/80" />
       <span className="ml-3 text-xs text-muted-foreground truncate font-mono">{url}</span>
     </div>
-    <div className="hidden md:block">
+    <div className="hidden md:block overflow-hidden aspect-video">
       <iframe
         src={url}
         title={title}
-        className="w-full aspect-video border-0"
+        className="w-[200%] h-[200%] border-0 origin-top-left scale-50"
         loading="lazy"
         sandbox="allow-scripts allow-same-origin"
       />
