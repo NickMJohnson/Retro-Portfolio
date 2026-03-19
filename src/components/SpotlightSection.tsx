@@ -24,6 +24,15 @@ export const spotlightProjects: SpotlightProject[] = [
     iframeUrl: "https://hourly-halo.vercel.app",
   },
   {
+    title: "SolidGuard",
+    description:
+      "A security-focused application for smart contract auditing and protection. Helps developers identify vulnerabilities and safeguard their blockchain deployments.",
+    tech: ["React", "TypeScript", "Solidity", "Vercel"],
+    liveUrl: "https://solidguard.vercel.app",
+    githubUrl: "https://github.com",
+    iframeUrl: "https://solidguard.vercel.app",
+  },
+  {
     title: "AI Research Assistant",
     description:
       "An intelligent research tool that uses RAG to help users search, summarize, and synthesize academic papers. Features semantic search and citation management.",
