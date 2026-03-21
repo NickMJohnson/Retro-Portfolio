@@ -50,6 +50,15 @@ export const spotlightProjects: SpotlightProject[] = [
     githubUrl: "https://github.com",
     iframeUrl: "https://example.com",
   },
+  {
+    title: "StockGPT",
+    description:
+      "An AI-powered stock analysis tool that leverages GPT to provide intelligent insights, market predictions, and portfolio recommendations in real time.",
+    tech: ["React", "TypeScript", "OpenAI", "Vercel"],
+    liveUrl: "https://stock-gpt-five.vercel.app",
+    githubUrl: "https://github.com/NickMJohnson/StockGPT",
+    iframeUrl: "https://stock-gpt-five.vercel.app",
+  },
 ];
 
 const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
