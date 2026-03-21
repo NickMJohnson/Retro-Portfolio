@@ -73,7 +73,7 @@ export const ProjectsSection = () => {
       <div className="section-container">
         <ScrollReveal>
           <h2 className="section-heading"><span className="gradient-text">Projects</span></h2>
-          <p className="section-subheading">A selection of things I've built.</p>
+          <p className="section-subheading">// ls ~/projects</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
@@ -83,10 +83,10 @@ export const ProjectsSection = () => {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={cn(
-                  "px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300",
+                  "px-4 py-1.5 text-xs font-mono uppercase tracking-wider transition-all duration-300",
                   activeCategory === cat
-                    ? "gradient-bg text-white shadow-lg"
-                    : "bg-white/10 dark:bg-white/5 text-muted-foreground backdrop-blur-sm border border-white/15 hover:bg-white/20 hover:text-foreground"
+                    ? "bg-primary/10 text-primary border border-primary shadow-[0_0_12px_hsla(var(--neon-cyan)/0.3)]"
+                    : "text-muted-foreground border border-border hover:border-primary/50 hover:text-primary"
                 )}
               >
                 {cat}
@@ -98,28 +98,28 @@ export const ProjectsSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((project, i) => (
             <ScrollReveal key={project.title} delay={i * 0.05}>
-              <div className="group glass-card h-full flex flex-col hover:scale-[1.02] transition-all duration-300">
-                <h3 className="font-semibold text-foreground mb-1.5">{project.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4 flex-1">{project.description}</p>
+              <div className="group cyber-card h-full flex flex-col transition-all duration-300 hover:shadow-[0_0_20px_hsla(var(--neon-cyan)/0.15)]">
+                <h3 className="font-semibold text-foreground mb-1.5 text-sm">{project.title}</h3>
+                <p className="text-xs text-muted-foreground mb-4 flex-1 font-mono leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tech.map((t) => (
-                    <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-white/10 dark:bg-white/5 text-muted-foreground font-mono backdrop-blur-sm">
+                    <span key={t} className="text-xs px-2 py-0.5 font-mono text-accent-foreground bg-accent/10 border border-accent/20">
                       {t}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-2">
                   {project.demo && (
-                    <Button variant="ghost" size="sm" className="rounded-full" asChild>
+                    <Button variant="ghost" size="sm" className="text-primary hover:bg-primary/10 font-mono text-xs" asChild>
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-3.5 h-3.5 mr-1" /> Demo
+                        <ExternalLink className="w-3 h-3 mr-1" /> Demo
                       </a>
                     </Button>
                   )}
                   {project.github && (
-                    <Button variant="ghost" size="sm" className="rounded-full" asChild>
+                    <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground font-mono text-xs" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-3.5 h-3.5 mr-1" /> Code
+                        <Github className="w-3 h-3 mr-1" /> Code
                       </a>
                     </Button>
                   )}

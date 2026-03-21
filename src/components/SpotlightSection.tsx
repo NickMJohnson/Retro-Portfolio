@@ -1,5 +1,4 @@
 import { ExternalLink, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { cn } from "@/lib/utils";
 
@@ -62,11 +61,11 @@ export const spotlightProjects: SpotlightProject[] = [
 ];
 
 const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
-  <div className="browser-chrome">
+  <div className="browser-chrome relative scanlines">
     <div className="browser-chrome-bar">
-      <div className="browser-dot bg-red-400/80" />
-      <div className="browser-dot bg-yellow-400/80" />
-      <div className="browser-dot bg-green-400/80" />
+      <div className="browser-dot bg-destructive/60" />
+      <div className="browser-dot bg-neon-amber/60" />
+      <div className="browser-dot bg-primary/60" />
       <span className="ml-3 text-xs text-muted-foreground truncate font-mono">{url}</span>
     </div>
     <div className="hidden md:block overflow-hidden aspect-video">
@@ -83,10 +82,10 @@ const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block aspect-video bg-muted/30 flex items-center justify-center text-sm text-muted-foreground hover:text-foreground transition-colors backdrop-blur-sm"
+        className="block aspect-video bg-muted/30 flex items-center justify-center text-xs font-mono text-primary hover:text-foreground transition-colors"
       >
         <span className="flex items-center gap-2">
-          <ExternalLink className="w-4 h-4" /> Tap to open live app
+          <ExternalLink className="w-3.5 h-3.5" /> Open live app →
         </span>
       </a>
     </div>
@@ -98,8 +97,8 @@ export const SpotlightSection = () => {
     <div className="space-y-20 mt-16">
       <ScrollReveal>
         <div className="section-container !py-0">
-          <h3 className="text-xl font-semibold mb-1"><span className="gradient-text">Featured Spotlights</span></h3>
-          <p className="text-sm text-muted-foreground mb-8">Deep dives into my most impactful projects.</p>
+          <h3 className="text-xl font-display font-semibold mb-1"><span className="gradient-text">Featured Spotlights</span></h3>
+          <p className="text-xs font-mono text-muted-foreground mb-8">// cat ~/projects/featured/*</p>
         </div>
       </ScrollReveal>
 
@@ -116,28 +115,24 @@ export const SpotlightSection = () => {
               >
                 <BrowserFrame url={project.iframeUrl} title={project.title} />
 
-                <div className="flex flex-col justify-center glass-card">
-                  <h4 className="text-lg font-semibold text-foreground mb-2">{project.title}</h4>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+                <div className="flex flex-col justify-center cyber-card">
+                  <h4 className="text-lg font-display font-semibold text-foreground mb-2">{project.title}</h4>
+                  <p className="text-xs text-muted-foreground mb-4 leading-relaxed font-mono">{project.description}</p>
                   <div className="flex flex-wrap gap-1.5 mb-5">
                     {project.tech.map((t) => (
-                      <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-white/10 dark:bg-white/5 text-muted-foreground font-mono backdrop-blur-sm">
+                      <span key={t} className="tag-chip">
                         {t}
                       </span>
                     ))}
                   </div>
                   <div className="flex gap-3">
-                    <Button size="sm" asChild className="rounded-full gradient-bg border-0 text-white hover:opacity-90">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-3.5 h-3.5 mr-1.5" /> Visit Live App
-                      </a>
-                    </Button>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="neon-btn text-xs">
+                      <ExternalLink className="w-3 h-3 inline mr-1.5" /> Visit Live
+                    </a>
                     {project.githubUrl && (
-                      <Button variant="outline" size="sm" asChild className="rounded-full backdrop-blur-sm bg-white/10 border-white/20 hover:bg-white/20">
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-3.5 h-3.5 mr-1.5" /> View Source
-                        </a>
-                      </Button>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="neon-btn neon-btn-magenta text-xs">
+                        <Github className="w-3 h-3 inline mr-1.5" /> Source
+                      </a>
                     )}
                   </div>
                 </div>

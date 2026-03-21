@@ -1,5 +1,4 @@
 import { FileText, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 interface TimelineItem {
@@ -41,19 +40,20 @@ const education: TimelineItem[] = [
 
 const TimelineBlock = ({ items, label }: { items: TimelineItem[]; label: string }) => (
   <div>
-    <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-6">{label}</h3>
+    <h3 className="text-xs font-mono text-primary uppercase tracking-wider mb-6">&gt; {label.toLowerCase()}</h3>
     <div className="space-y-6 relative">
-      <div className="absolute left-[7px] top-2 bottom-2 w-px gradient-bg opacity-30" />
+      <div className="absolute left-[5px] top-2 bottom-2 w-px bg-gradient-to-b from-primary via-accent to-transparent opacity-40" />
       {items.map((item, i) => (
         <ScrollReveal key={i} delay={i * 0.08}>
           <div className="relative pl-8">
-            <div className="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full gradient-bg shadow-lg" style={{
-              boxShadow: "0 0 12px hsla(var(--primary) / 0.4)"
-            }} />
+            <div
+              className="absolute left-0 top-1.5 w-[11px] h-[11px] border-2 border-primary bg-background"
+              style={{ boxShadow: "0 0 8px hsla(var(--neon-cyan) / 0.6)" }}
+            />
             <p className="text-xs text-muted-foreground font-mono mb-1">{item.period}</p>
-            <h4 className="font-medium text-foreground">{item.title}</h4>
-            <p className="text-sm text-primary mb-1">{item.organization}</p>
-            <p className="text-sm text-muted-foreground">{item.description}</p>
+            <h4 className="font-medium text-foreground text-sm">{item.title}</h4>
+            <p className="text-xs text-primary font-mono mb-1">{item.organization}</p>
+            <p className="text-xs text-muted-foreground">{item.description}</p>
           </div>
         </ScrollReveal>
       ))}
@@ -67,25 +67,21 @@ export const ResumeSection = () => {
       <div className="section-container">
         <ScrollReveal>
           <h2 className="section-heading"><span className="gradient-text">Resume</span></h2>
-          <p className="section-subheading">My experience and education at a glance.</p>
+          <p className="section-subheading">// cat ~/resume.md</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
           <div className="flex gap-3 mb-12">
-            <Button asChild className="rounded-full gradient-bg border-0 text-white hover:opacity-90">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                <FileText className="w-4 h-4 mr-2" /> View Resume
-              </a>
-            </Button>
-            <Button variant="outline" asChild className="rounded-full backdrop-blur-sm bg-white/10 border-white/20 hover:bg-white/20">
-              <a href="/resume.pdf" download>
-                <Download className="w-4 h-4 mr-2" /> Download PDF
-              </a>
-            </Button>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="neon-btn text-xs">
+              <FileText className="w-3.5 h-3.5 inline mr-2" /> View Resume
+            </a>
+            <a href="/resume.pdf" download className="neon-btn neon-btn-magenta text-xs">
+              <Download className="w-3.5 h-3.5 inline mr-2" /> Download PDF
+            </a>
           </div>
         </ScrollReveal>
 
-        <div className="glass-card">
+        <div className="cyber-card">
           <div className="grid md:grid-cols-2 gap-16">
             <TimelineBlock items={experience} label="Experience" />
             <TimelineBlock items={education} label="Education" />

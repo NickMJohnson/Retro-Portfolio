@@ -1,5 +1,4 @@
-import { ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowDown, Terminal } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const HeroSection = () => {
@@ -7,52 +6,48 @@ export const HeroSection = () => {
     <section className="min-h-screen flex items-center relative overflow-hidden">
       <div className="section-container w-full">
         <ScrollReveal>
-          <p className="text-sm font-medium text-primary tracking-widest uppercase mb-4">Hello, I'm</p>
+          <div className="flex items-center gap-2 mb-6">
+            <Terminal className="w-4 h-4 text-primary" />
+            <span className="text-xs font-mono text-primary tracking-widest uppercase">sys.init &gt; hello_world</span>
+          </div>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4">
-            <span className="gradient-text">Your Name</span>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold tracking-tight mb-4 glitch-hover">
+            <span className="neon-text">Your</span>{" "}
+            <span className="neon-text-magenta">Name</span>
           </h1>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-8">
-            Software Engineer · AI Builder · Cornell University
+          <p className="text-base md:text-lg text-muted-foreground max-w-lg mb-10 font-mono">
+            <span className="text-primary">$</span> Software Engineer · AI Builder · Cornell University
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
-          <div className="flex gap-3">
-            <Button asChild className="rounded-full gradient-bg border-0 text-white hover:opacity-90 px-6">
-              <a href="#projects">View Projects</a>
-            </Button>
-            <Button variant="outline" asChild className="rounded-full px-6 backdrop-blur-sm bg-white/10 border-white/20 hover:bg-white/20">
-              <a href="#resume">Resume</a>
-            </Button>
+          <div className="flex gap-4">
+            <a href="#projects" className="neon-btn">
+              View Projects
+            </a>
+            <a href="#resume" className="neon-btn neon-btn-magenta">
+              Resume
+            </a>
           </div>
         </ScrollReveal>
         <ScrollReveal delay={0.5}>
           <a
             href="#about"
-            className="inline-flex items-center gap-2 mt-16 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="inline-flex items-center gap-2 mt-16 text-xs font-mono text-muted-foreground hover:text-primary transition-colors"
           >
-            <ArrowDown className="w-4 h-4 animate-bounce" />
-            Scroll to explore
+            <ArrowDown className="w-3 h-3 animate-bounce" />
+            scroll_to_explore()
           </a>
         </ScrollReveal>
       </div>
 
-      {/* Floating glass orbs */}
-      <div className="absolute top-1/2 right-[8%] -translate-y-1/2 hidden lg:block pointer-events-none">
-        <div className="w-72 h-72 rounded-full animate-float" style={{
-          background: "linear-gradient(135deg, hsla(var(--gradient-start) / 0.15), hsla(var(--gradient-mid) / 0.1))",
-          backdropFilter: "blur(40px)",
-          border: "1px solid hsla(0 0% 100% / 0.1)",
-        }} />
-        <div className="absolute top-12 left-12 w-48 h-48 rounded-full animate-float-slow" style={{
-          background: "linear-gradient(225deg, hsla(var(--gradient-mid) / 0.2), hsla(var(--gradient-end) / 0.1))",
-          backdropFilter: "blur(30px)",
-          border: "1px solid hsla(0 0% 100% / 0.08)",
-        }} />
-        <div className="absolute top-24 left-24 w-28 h-28 rounded-full animate-float-slower gradient-bg opacity-20 blur-sm" />
+      {/* Decorative neon lines */}
+      <div className="absolute top-1/3 right-[5%] hidden lg:block pointer-events-none">
+        <div className="w-px h-40 bg-gradient-to-b from-transparent via-primary to-transparent opacity-40" />
+        <div className="absolute top-20 left-8 w-px h-60 bg-gradient-to-b from-transparent via-accent to-transparent opacity-30" />
+        <div className="absolute top-10 left-16 w-32 h-px bg-gradient-to-r from-primary to-transparent opacity-30" />
       </div>
     </section>
   );
