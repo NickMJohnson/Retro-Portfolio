@@ -10,8 +10,8 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <>
-      <div className="mesh-gradient" />
+    <div className="relative min-h-screen">
+      <div className="grid-bg" />
       <Header />
       <main>
         <HeroSection />
@@ -23,7 +23,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

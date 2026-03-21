@@ -43,7 +43,7 @@ export const ChatSection = () => {
       const reply = await askAI(trimmed, [...messages, userMessage]);
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch {
-      setMessages((prev) => [...prev, { role: "assistant", content: "Sorry, something went wrong. Please try again." }]);
+      setMessages((prev) => [...prev, { role: "assistant", content: "Error: connection lost. Please try again." }]);
     } finally {
       setIsLoading(false);
     }
@@ -55,31 +55,31 @@ export const ChatSection = () => {
         <ScrollReveal>
           <h2 className="section-heading"><span className="gradient-text">Ask Me Anything</span></h2>
           <p className="section-subheading">
-            This is an AI assistant trained on documents about my background, projects, and experience. Ask me anything!
+            // AI assistant trained on my background, projects, and experience
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="max-w-2xl mx-auto glass-card-strong !p-0 overflow-hidden">
+          <div className="max-w-2xl mx-auto cyber-card !p-0 overflow-hidden">
             <div className="h-80 overflow-y-auto p-4 space-y-4">
               {messages.map((msg, i) => (
                 <div key={i} className={cn("flex gap-3", msg.role === "user" && "flex-row-reverse")}>
                   <div
                     className={cn(
-                      "w-7 h-7 rounded-full flex items-center justify-center shrink-0",
+                      "w-7 h-7 flex items-center justify-center shrink-0 border",
                       msg.role === "assistant"
-                        ? "gradient-bg text-white"
-                        : "bg-white/15 text-foreground backdrop-blur-sm"
+                        ? "border-primary text-primary"
+                        : "border-accent text-accent"
                     )}
                   >
                     {msg.role === "assistant" ? <Bot className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
                   </div>
                   <div
                     className={cn(
-                      "max-w-[75%] rounded-2xl px-4 py-2.5 text-sm",
+                      "max-w-[75%] px-4 py-2.5 text-xs font-mono",
                       msg.role === "assistant"
-                        ? "bg-white/10 dark:bg-white/5 text-foreground backdrop-blur-sm"
-                        : "gradient-bg text-white"
+                        ? "bg-muted/50 text-foreground border border-border"
+                        : "bg-primary/10 text-primary border border-primary/30"
                     )}
                   >
                     {msg.content}
@@ -88,27 +88,32 @@ export const ChatSection = () => {
               ))}
               {isLoading && (
                 <div className="flex gap-3">
-                  <div className="w-7 h-7 rounded-full flex items-center justify-center gradient-bg text-white shrink-0">
+                  <div className="w-7 h-7 flex items-center justify-center shrink-0 border border-primary text-primary">
                     <Bot className="w-3.5 h-3.5" />
                   </div>
-                  <div className="bg-white/10 dark:bg-white/5 rounded-2xl px-4 py-2.5 text-sm text-muted-foreground backdrop-blur-sm">
-                    Thinking…
+                  <div className="bg-muted/50 border border-border px-4 py-2.5 text-xs font-mono text-primary animate-pulse-glow">
+                    processing_query...
                   </div>
                 </div>
               )}
               <div ref={bottomRef} />
             </div>
 
-            <div className="border-t border-white/10 p-3 flex gap-2">
+            <div className="border-t border-border p-3 flex gap-2">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                placeholder="Ask about my projects, skills, or experience…"
-                className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none px-3"
+                placeholder="$ ask_about --projects --skills --experience"
+                className="cyber-input flex-1 !border-0 !bg-transparent"
               />
-              <Button size="sm" onClick={handleSend} disabled={isLoading || !input.trim()} className="rounded-full gradient-bg border-0 text-white hover:opacity-90">
+              <Button
+                size="sm"
+                onClick={handleSend}
+                disabled={isLoading || !input.trim()}
+                className="bg-primary/10 text-primary border border-primary hover:bg-primary/20 font-mono text-xs"
+              >
                 <Send className="w-3.5 h-3.5" />
               </Button>
             </div>
