@@ -13,8 +13,8 @@ export const HeroSection = () => {
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold tracking-tight mb-4 glitch-hover">
-            <span className="neon-text">Your</span>{" "}
-            <span className="neon-text-magenta">Name</span>
+            <span className="neon-text">Nick</span>{" "}
+            <span className="neon-text-magenta">Johnson</span>
           </h1>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
