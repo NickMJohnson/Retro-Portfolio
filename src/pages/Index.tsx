@@ -16,8 +16,8 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
-        <ProjectsSection />
         <SpotlightSection />
+        <ProjectsSection />
         <ResumeSection />
         <ChatSection />
         <ContactSection />
