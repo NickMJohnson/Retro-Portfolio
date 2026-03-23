@@ -16,7 +16,7 @@ export const spotlightProjects: SpotlightProject[] = [
   {
     title: "Billable",
     description:
-      "A freelancer toolkit that tracks billable hours, auto-generates numbered invoices per client, and lets you export PDFs or email them directly. Hit start, log time, get paid.",
+      "One-tap time tracking with client & project management, automatic PDF invoice generation with tax calculations, and revenue reports with weekly charts and CSV exports. Built for freelancers who want to track every billable minute and get paid faster.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
     liveUrl: "https://hourly-halo.vercel.app",
     githubUrl: "https://github.com",
