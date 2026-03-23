@@ -58,6 +58,15 @@ export const spotlightProjects: SpotlightProject[] = [
     githubUrl: "https://github.com/NickMJohnson/StockGPT",
     iframeUrl: "https://stock-gpt-five.vercel.app",
   },
+  {
+    title: "Clairvoyant Crime Search",
+    description:
+      "AI-powered video search engine that lets investigators query surveillance footage in natural language — type \"person with yellow backpack\" and instantly surface the exact clips, across all cameras, ranked by visual similarity.",
+    tech: ["Python", "TypeScript", "React", "FastAPI", "PostgreSQL", "pgvector", "OpenCLIP", "Docker", "Tailwind CSS", "ffmpeg"],
+    liveUrl: "#",
+    githubUrl: "https://github.com",
+    iframeUrl: "#",
+  },
 ];
 
 const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
