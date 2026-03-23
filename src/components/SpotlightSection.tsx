@@ -14,7 +14,7 @@ export interface SpotlightProject {
 // ============ CONFIGURE YOUR SPOTLIGHT PROJECTS HERE ============
 export const spotlightProjects: SpotlightProject[] = [
   {
-    title: "Hourly Halo",
+    title: "Billable",
     description:
       "A beautifully designed productivity tool that helps you track how you spend your time hour-by-hour. Built with a focus on intuitive UX and clean data visualization.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
