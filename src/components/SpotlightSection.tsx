@@ -14,13 +14,13 @@ export interface SpotlightProject {
 // ============ CONFIGURE YOUR SPOTLIGHT PROJECTS HERE ============
 export const spotlightProjects: SpotlightProject[] = [
   {
-    title: "Billable",
+    title: "Clairvoyant Crime Search",
     description:
-      "One-tap time tracking with client & project management, automatic PDF invoice generation with tax calculations, and revenue reports with weekly charts and CSV exports. Built for freelancers who want to track every billable minute and get paid faster.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
-    liveUrl: "https://hourly-halo.vercel.app",
+      "AI-powered video search engine that lets investigators query surveillance footage in natural language — type \"person with yellow backpack\" and instantly surface the exact clips, across all cameras, ranked by visual similarity.",
+    tech: ["Python", "TypeScript", "React", "FastAPI", "PostgreSQL", "pgvector", "OpenCLIP", "Docker", "Tailwind CSS", "ffmpeg"],
+    liveUrl: "#",
     githubUrl: "https://github.com",
-    iframeUrl: "https://hourly-halo.vercel.app",
+    iframeUrl: "#",
   },
   {
     title: "SolidGuard",
@@ -30,6 +30,15 @@ export const spotlightProjects: SpotlightProject[] = [
     liveUrl: "https://solidguard.vercel.app",
     githubUrl: "https://github.com",
     iframeUrl: "https://solidguard.vercel.app",
+  },
+  {
+    title: "Billable",
+    description:
+      "One-tap time tracking with client & project management, automatic PDF invoice generation with tax calculations, and revenue reports with weekly charts and CSV exports. Built for freelancers who want to track every billable minute and get paid faster.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://hourly-halo.vercel.app",
+    githubUrl: "https://github.com",
+    iframeUrl: "https://hourly-halo.vercel.app",
   },
   {
     title: "AI Research Assistant",
@@ -57,15 +66,6 @@ export const spotlightProjects: SpotlightProject[] = [
     liveUrl: "https://stock-gpt-five.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/StockGPT",
     iframeUrl: "https://stock-gpt-five.vercel.app",
-  },
-  {
-    title: "Clairvoyant Crime Search",
-    description:
-      "AI-powered video search engine that lets investigators query surveillance footage in natural language — type \"person with yellow backpack\" and instantly surface the exact clips, across all cameras, ranked by visual similarity.",
-    tech: ["Python", "TypeScript", "React", "FastAPI", "PostgreSQL", "pgvector", "OpenCLIP", "Docker", "Tailwind CSS", "ffmpeg"],
-    liveUrl: "#",
-    githubUrl: "https://github.com",
-    iframeUrl: "#",
   },
 ];
 
