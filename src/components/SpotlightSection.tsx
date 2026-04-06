@@ -41,24 +41,6 @@ export const spotlightProjects: SpotlightProject[] = [
     iframeUrl: "https://hourly-halo.vercel.app",
   },
   {
-    title: "AI Research Assistant",
-    description:
-      "An intelligent research tool that uses RAG to help users search, summarize, and synthesize academic papers. Features semantic search and citation management.",
-    tech: ["Python", "FastAPI", "LangChain", "React", "Pinecone"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    iframeUrl: "https://example.com",
-  },
-  {
-    title: "Procedural Terrain Generator",
-    description:
-      "A WebGL-powered terrain generator using Perlin noise and hydraulic erosion simulation. Export meshes for use in 3D applications.",
-    tech: ["TypeScript", "Three.js", "WebGL", "GLSL"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    iframeUrl: "https://example.com",
-  },
-  {
     title: "StockGPT",
     description:
       "An AI-powered stock analysis tool that leverages GPT to provide intelligent insights, market predictions, and portfolio recommendations in real time.",
