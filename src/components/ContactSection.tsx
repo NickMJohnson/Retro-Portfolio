@@ -79,7 +79,7 @@ export const ContactSection = () => {
                   <div className="w-8 h-8 flex items-center justify-center border border-border text-muted-foreground">
                     <Github className="w-3.5 h-3.5" />
                   </div>
-                  github.com/NickMJohnson
+                  GitHub
                 </a>
                 <a
                   href="https://www.linkedin.com/in/nick-m-johnson/"
@@ -90,7 +90,7 @@ export const ContactSection = () => {
                   <div className="w-8 h-8 flex items-center justify-center border border-border text-muted-foreground">
                     <Linkedin className="w-3.5 h-3.5" />
                   </div>
-                  linkedin.com/in/nick-m-johnson
+                  LinkedIn
                 </a>
               </div>
             </div>
