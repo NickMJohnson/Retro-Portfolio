@@ -62,16 +62,16 @@ export const ContactSection = () => {
               </p>
               <div className="space-y-3">
                 <a
-                  href="mailto:you@example.com"
+                  href="mailto:nmj37@cornell.edu"
                   className="flex items-center gap-3 text-xs font-mono text-foreground hover:text-primary transition-colors"
                 >
                   <div className="w-8 h-8 flex items-center justify-center border border-primary text-primary">
                     <Mail className="w-3.5 h-3.5" />
                   </div>
-                  you@example.com
+                  nmj37@cornell.edu
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/NickMJohnson"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-xs font-mono text-foreground hover:text-primary transition-colors"
@@ -79,10 +79,10 @@ export const ContactSection = () => {
                   <div className="w-8 h-8 flex items-center justify-center border border-border text-muted-foreground">
                     <Github className="w-3.5 h-3.5" />
                   </div>
-                  GitHub
+                  github.com/NickMJohnson
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/nick-m-johnson/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-xs font-mono text-foreground hover:text-primary transition-colors"
@@ -90,7 +90,7 @@ export const ContactSection = () => {
                   <div className="w-8 h-8 flex items-center justify-center border border-border text-muted-foreground">
                     <Linkedin className="w-3.5 h-3.5" />
                   </div>
-                  LinkedIn
+                  linkedin.com/in/nick-m-johnson
                 </a>
               </div>
             </div>
