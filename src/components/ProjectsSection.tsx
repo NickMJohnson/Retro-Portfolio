@@ -15,6 +15,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Cornell Rocketry Autopilot",
+    description: "GPS-guided parafoil autopilot running on embedded hardware, using sensor fusion of barometric and GPS altitude data to navigate a deployable glider back to a home coordinate.",
+    tech: ["C++", "Arduino", "Embedded Systems", "GPS", "Sensor Fusion", "PID Control", "TinyGPS++", "PWM Servos"],
+    category: "Systems",
+    github: "https://github.com/NickMJohnson/Cornell-Rocketry-Autopilot",
+  },
+  {
     title: "Image Eraser",
     description: "Click-to-remove object eraser using SAM for instant segmentation and Stable Diffusion inpainting to fill with realistic background.",
     tech: ["Python", "PyTorch", "Stable Diffusion", "Segment Anything", "Gradio", "HuggingFace"],
