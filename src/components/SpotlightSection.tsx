@@ -26,7 +26,7 @@ export const spotlightProjects: SpotlightProject[] = [
     title: "SolidGuard",
     description:
       "A security-focused application for smart contract auditing and protection. Helps developers identify vulnerabilities and safeguard their blockchain deployments.",
-    tech: ["React", "TypeScript", "Solidity", "Vercel"],
+    tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "shadcn/ui", "Monaco Editor", "Python", "FastAPI", "Pydantic", "OpenAI API", "RAG", "NumPy", "Solidity", "Vercel", "Render"],
     liveUrl: "https://solidguard.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/SolidGuard",
     iframeUrl: "https://solidguard.vercel.app",
@@ -37,7 +37,7 @@ export const spotlightProjects: SpotlightProject[] = [
       "Freelancer time tracking and invoicing app — start a timer, assign it to a client and project, then generate a PDF invoice and email it directly from the app. Includes idle detection, configurable timer rounding, revenue reports, and per-project billing rates.",
     tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL", "shadcn/ui", "Resend", "jsPDF"],
     liveUrl: "https://hourly-halo.vercel.app",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/NickMJohnson/hourly-halo",
     iframeUrl: "https://hourly-halo.vercel.app",
   },
   {
