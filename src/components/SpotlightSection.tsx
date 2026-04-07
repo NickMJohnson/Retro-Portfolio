@@ -43,8 +43,8 @@ export const spotlightProjects: SpotlightProject[] = [
   {
     title: "StockGPT",
     description:
-      "An AI-powered stock analysis tool that leverages GPT to provide intelligent insights, market predictions, and portfolio recommendations in real time.",
-    tech: ["React", "TypeScript", "OpenAI", "Vercel"],
+      "Pulls real SEC filings for any public company and turns them into an instant financial analyst. Search a ticker, pick a filing, and get a full income statement, balance sheet, and cash flow statement — sourced live from SEC EDGAR. Computed ratios, interactive trend charts, and an AI-written summary load alongside the data. A chat sidebar lets you ask anything about the filing, and an AI Lab tab lets you request any custom metric or chart in plain English — results appear as an interactive dashboard of tiles.",
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Recharts", "Python", "FastAPI", "Pydantic", "SEC EDGAR API", "Claude API", "Vercel", "Railway"],
     liveUrl: "https://stock-gpt-five.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/StockGPT",
     iframeUrl: "https://stock-gpt-five.vercel.app",

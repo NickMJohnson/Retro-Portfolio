@@ -136,9 +136,11 @@ Autopilot flight computer for BLiMS (Brake Line Manipulation System) — a steer
 ---
 
 ### StockGPT (Live: https://stock-gpt-five.vercel.app | GitHub: https://github.com/NickMJohnson/StockGPT)
-AI-powered stock analysis tool using GPT for intelligent insights, market predictions, and portfolio recommendations in real time.
+Pulls real SEC filings for any public company and turns them into an instant financial analyst. Search a ticker, pick a filing, and get a full income statement, balance sheet, and cash flow statement — sourced live from SEC EDGAR (not a third-party database). Computed ratios, interactive trend charts, and an AI-written summary load alongside the data. A chat sidebar lets you ask anything about the filing, and an AI Lab tab lets you request any custom metric or chart in plain English — results appear as an interactive, curated dashboard of deletable tiles.
 
-**Tech stack:** React, TypeScript, OpenAI API, Vercel.
+**Tech stack:** React 18, TypeScript, Vite, Tailwind CSS, shadcn/ui, Recharts (frontend) | Python, FastAPI, Pydantic v2 (backend) | SEC EDGAR companyfacts API (XBRL) | Anthropic Claude API (claude-opus-4-6) | Vercel (frontend), Railway (backend).
+
+**Skills demonstrated:** Full-stack web development, REST API design and integration, data pipeline engineering, AI/LLM integration (structured output, prompt engineering, context injection), working with real government APIs under rate limits, graceful error handling and UX design.
 `;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
