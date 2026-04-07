@@ -17,7 +17,7 @@ const projects: Project[] = [
   {
     title: "BRB/USD Trading Platform",
     description: "Simulated cryptocurrency exchange in OCaml with a price-time priority order matching engine supporting partial fills. Users create accounts, deposit funds, and place buy/sell orders through an interactive CLI with live ASCII order book visualization and JSON-based persistent storage.",
-    tech: ["OCaml", "Dune", "Functional Programming", "Order Matching Engine", "CLI REPL", "JSON Persistence", "Yojson", "OUnit2", "Data Structures"],
+    tech: ["OCaml", "Functional Programming", "Data Structures", "System Design", "Dune", "Yojson", "OUnit2", "Order Matching Engine"],
     category: "Systems",
     github: "https://github.com/NickMJohnson/Auto-Market-Maker-3110",
   },
