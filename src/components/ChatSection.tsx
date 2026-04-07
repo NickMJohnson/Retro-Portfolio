@@ -9,17 +9,24 @@ interface Message {
   content: string;
 }
 
-// ============ PLACEHOLDER: Replace with your RAG API call ============
-async function askAI(question: string, _history: Message[]): Promise<string> {
-  await new Promise((r) => setTimeout(r, 1200));
-  return `Thanks for asking! I'm a placeholder response. The real AI backend will be connected soon. You asked: "${question}"`;
+async function askAI(messages: Message[]): Promise<string> {
+  const res = await fetch("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ messages }),
+  });
+
+  if (!res.ok) throw new Error("Request failed");
+
+  const data = await res.json();
+  return data.reply;
 }
 
 export const ChatSection = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi! I'm an AI assistant that knows about this portfolio's owner — their projects, skills, and experience. Ask me anything!",
+      content: "Hi! I'm an AI assistant that knows about Nick's projects, skills, and experience. Ask me anything!",
     },
   ]);
   const [input, setInput] = useState("");
@@ -35,12 +42,15 @@ export const ChatSection = () => {
     if (!trimmed || isLoading) return;
 
     const userMessage: Message = { role: "user", content: trimmed };
-    setMessages((prev) => [...prev, userMessage]);
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
     setInput("");
     setIsLoading(true);
 
     try {
-      const reply = await askAI(trimmed, [...messages, userMessage]);
+      // Send only user/assistant turns (exclude the initial greeting which has no API history)
+      const apiMessages = updatedMessages.slice(1); // skip the initial assistant greeting
+      const reply = await askAI(apiMessages);
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch {
       setMessages((prev) => [...prev, { role: "assistant", content: "Error: connection lost. Please try again." }]);
@@ -76,7 +86,7 @@ export const ChatSection = () => {
                   </div>
                   <div
                     className={cn(
-                      "max-w-[75%] px-4 py-2.5 text-xs font-mono",
+                      "max-w-[75%] px-4 py-2.5 text-xs font-mono whitespace-pre-wrap",
                       msg.role === "assistant"
                         ? "bg-muted/50 text-foreground border border-border"
                         : "bg-primary/10 text-primary border border-primary/30"
