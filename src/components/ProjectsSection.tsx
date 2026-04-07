@@ -15,6 +15,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "NHANES Prediabetes Prediction API",
+    description: "ML classifier predicting prediabetes likelihood from self-reported survey data, trained on 5,000+ CDC NHANES respondents. Evaluated four model families via stratified cross-validation, selecting a logistic regression pipeline deployed as a live REST API for use by clinics and community health programs.",
+    tech: ["Python", "R", "scikit-learn", "FastAPI", "Vetiver", "Docker", "REST API", "Logistic Regression", "Machine Learning"],
+    category: "AI/ML",
+    github: "https://github.com/NickMJohnson/proj-01-dank-corgi",
+  },
+  {
     title: "BRB/USD Trading Platform",
     description: "Simulated cryptocurrency exchange in OCaml with a price-time priority order matching engine supporting partial fills. Users create accounts, deposit funds, and place buy/sell orders through an interactive CLI with live ASCII order book visualization and JSON-based persistent storage.",
     tech: ["OCaml", "Functional Programming", "Data Structures", "System Design", "Dune", "Yojson", "OUnit2", "Order Matching Engine"],
