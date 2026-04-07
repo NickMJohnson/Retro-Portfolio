@@ -4,14 +4,25 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Contact form submitted:", form);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setForm({ name: "", email: "", message: "" });
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setStatus("sent");
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setStatus("idle"), 4000);
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 4000);
+    }
   };
 
   return (
@@ -49,8 +60,8 @@ export const ContactSection = () => {
                 rows={4}
                 className="cyber-input resize-none"
               />
-              <button type="submit" disabled={submitted} className="neon-btn text-xs w-full">
-                {submitted ? ">> SENT" : <><Send className="w-3 h-3 inline mr-2" /> TRANSMIT</>}
+              <button type="submit" disabled={status === "sending" || status === "sent"} className="neon-btn text-xs w-full">
+                {status === "sending" ? ">> TRANSMITTING..." : status === "sent" ? ">> SENT" : status === "error" ? ">> ERROR — RETRY" : <><Send className="w-3 h-3 inline mr-2" /> TRANSMIT</>}
               </button>
             </form>
           </ScrollReveal>
