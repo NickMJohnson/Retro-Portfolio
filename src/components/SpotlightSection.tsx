@@ -28,7 +28,7 @@ export const spotlightProjects: SpotlightProject[] = [
       "A security-focused application for smart contract auditing and protection. Helps developers identify vulnerabilities and safeguard their blockchain deployments.",
     tech: ["React", "TypeScript", "Solidity", "Vercel"],
     liveUrl: "https://solidguard.vercel.app",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/NickMJohnson/SolidGuard",
     iframeUrl: "https://solidguard.vercel.app",
   },
   {
