@@ -19,6 +19,7 @@ const projects: Project[] = [
     description: "GPS-guided parafoil autopilot running on embedded hardware, using sensor fusion of barometric and GPS altitude data to navigate a deployable glider back to a home coordinate.",
     tech: ["C++", "Arduino", "Embedded Systems", "GPS", "Sensor Fusion", "PID Control", "TinyGPS++", "PWM Servos"],
     category: "Systems",
+    demo: "https://nickmjohnson.github.io/Cornell-Rocketry-Autopilot/visualization.html",
     github: "https://github.com/NickMJohnson/Cornell-Rocketry-Autopilot",
   },
   {
