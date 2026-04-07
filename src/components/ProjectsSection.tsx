@@ -15,6 +15,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "BRB/USD Trading Platform",
+    description: "Simulated cryptocurrency exchange in OCaml with a price-time priority order matching engine supporting partial fills. Users create accounts, deposit funds, and place buy/sell orders through an interactive CLI with live ASCII order book visualization and JSON-based persistent storage.",
+    tech: ["OCaml", "Dune", "Functional Programming", "Order Matching Engine", "CLI REPL", "JSON Persistence", "Yojson", "OUnit2", "Data Structures"],
+    category: "Systems",
+    github: "https://github.com/NickMJohnson/Auto-Market-Maker-3110",
+  },
+  {
     title: "Cornell Rocketry Autopilot",
     description: "GPS-guided parafoil autopilot running on embedded hardware, using sensor fusion of barometric and GPS altitude data to navigate a deployable glider back to a home coordinate.",
     tech: ["C++", "Arduino", "Embedded Systems", "GPS", "Sensor Fusion", "PID Control", "TinyGPS++", "PWM Servos"],
