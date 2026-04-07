@@ -15,6 +15,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Image Eraser",
+    description: "Click-to-remove object eraser using SAM for instant segmentation and Stable Diffusion inpainting to fill with realistic background.",
+    tech: ["Python", "PyTorch", "Stable Diffusion", "Segment Anything", "Gradio", "HuggingFace"],
+    category: "AI/ML",
+    github: "https://github.com/NickMJohnson/ImageEraser",
+  },
+  {
     title: "Neural Style Transfer App",
     description: "Real-time neural style transfer using optimized CNN architectures with a web interface.",
     tech: ["Python", "PyTorch", "React", "FastAPI"],
