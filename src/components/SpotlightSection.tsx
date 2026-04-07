@@ -34,8 +34,8 @@ export const spotlightProjects: SpotlightProject[] = [
   {
     title: "Billable",
     description:
-      "One-tap time tracking with client & project management, automatic PDF invoice generation with tax calculations, and revenue reports with weekly charts and CSV exports. Built for freelancers who want to track every billable minute and get paid faster.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+      "Freelancer time tracking and invoicing app — start a timer, assign it to a client and project, then generate a PDF invoice and email it directly from the app. Includes idle detection, configurable timer rounding, revenue reports, and per-project billing rates.",
+    tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL", "shadcn/ui", "Resend", "jsPDF"],
     liveUrl: "https://hourly-halo.vercel.app",
     githubUrl: "https://github.com",
     iframeUrl: "https://hourly-halo.vercel.app",
