@@ -21,21 +21,21 @@ export const AboutSection = () => {
           <div className="md:col-span-3 cyber-card space-y-4">
             <ScrollReveal>
               <p className="text-foreground/80 leading-relaxed text-sm">
-                I'm a software engineer and AI builder studying at Cornell University. I love working at the
-                intersection of machine learning and product engineering.
+                I build things that fly, trade, and think. I'm a CS student at Cornell who's shipped full-stack web apps,
+                written flight software for a steerable parachute, founded a few companies, and trained ML models on real-world data.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-foreground/80 leading-relaxed text-sm">
-                My work spans computer vision, information retrieval, full-stack web development, and
-                systems programming. I'm particularly drawn to problems where thoughtful engineering
-                decisions can unlock new capabilities.
+                At Cornell Rocketry I built the autopilot that guided our payload back to the launch site.
+                Before that I started Infrared Air to inspect solar arrays with drones, and LifeTote to build
+                a bag that converts into a bulletproof vest. I tend to find my way into weird, ambitious projects.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p className="text-foreground/80 leading-relaxed text-sm">
-                Outside of engineering, I care about intuitive design, and building things
-                that people actually want to use.
+                Outside of code I'm into drone racing, model aviation, and guitar. I care a lot about
+                making things that actually work and that people actually want to use.
               </p>
             </ScrollReveal>
           </div>
