@@ -23,6 +23,13 @@ const projects: Project[] = [
     github: "https://github.com/NickMJohnson/Cornell-Rocketry-Autopilot",
   },
   {
+    title: "Legalization Attitude Predictor",
+    description: "Classification pipeline trained on General Social Survey data to predict public attitudes toward marijuana legalization. Compared Lasso, Elastic-Net, Random Forest, and Gradient Boosting models with hyperparameter tuning, class imbalance handling via downsampling, and evaluation across sensitivity, specificity, ROC AUC, and Brier score.",
+    tech: ["Python", "scikit-learn", "imbalanced-learn", "pandas", "NumPy", "Matplotlib", "GridSearchCV", "Logistic Regression", "Random Forest", "Gradient Boosting"],
+    category: "AI/ML",
+    github: "https://github.com/NickMJohnson/hw-03-nmj37",
+  },
+  {
     title: "Coffee Preference Predictor",
     description: "Binary classification pipeline predicting whether survey respondents enjoy a specialty coffee, trained on the 2023 Great American Coffee Taste Test dataset. Compares logistic regression, random forest, and gradient boosting models using stratified cross-validation, with probability calibration and ROC/Brier score evaluation.",
     tech: ["Python", "scikit-learn", "pandas", "Quarto", "Logistic Regression", "Random Forest", "Gradient Boosting", "Cross-Validation", "Model Calibration", "Feature Engineering"],
