@@ -65,8 +65,12 @@ const BrowserFrame = ({ url, title, scrollOffset = 0 }: { url: string; title: st
       <iframe
         src={url}
         title={title}
-        className="w-[200%] h-[200%] border-0 origin-top-left"
-        style={{ transform: `scale(0.5) translateY(-${scrollOffset}px)` }}
+        className="w-[200%] border-0"
+        style={{
+          height: `calc(200% + ${scrollOffset}px)`,
+          transform: `translateY(-${scrollOffset / 2}px) scale(0.5)`,
+          transformOrigin: "top left",
+        }}
         loading="lazy"
         sandbox="allow-scripts allow-same-origin"
       />
