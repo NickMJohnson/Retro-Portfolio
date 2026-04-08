@@ -22,7 +22,7 @@ export const spotlightProjects: SpotlightProject[] = [
     liveUrl: "https://clairvoyant-rouge.vercel.app",
     githubUrl: "https://github.com",
     iframeUrl: "https://clairvoyant-rouge.vercel.app",
-    iframeScrollOffset: 800,
+    iframeScrollOffset: 710,
   },
   {
     title: "SolidGuard",
