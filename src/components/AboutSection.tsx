@@ -27,7 +27,7 @@ export const AboutSection = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-foreground/80 leading-relaxed text-sm">
-                At Cornell Rocketry I built the autopilot that guided our payload back to the launch site.
+                At Cornell Rocketry I worked on an autopilot system to guide our payload back to the launch site.
                 Before that I started Infrared Air to inspect solar arrays with drones, and LifeTote to build
                 a bag that converts into a bulletproof vest. I tend to find my way into weird, ambitious projects.
               </p>
