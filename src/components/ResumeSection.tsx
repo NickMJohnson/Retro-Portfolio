@@ -27,7 +27,7 @@ const experience: TimelineItem[] = [
   },
   {
     period: "Sep 2021 — May 2024",
-    title: "Recovery & Payload Team Member",
+    title: "Recovery & Payload Team",
     organization: "Cornell Rocketry",
     description: [
       "Engineered autopilot flight software integrating GPS, altimeter, compass, and accelerometer data to guide payload recovery to a predefined landing zone.",
