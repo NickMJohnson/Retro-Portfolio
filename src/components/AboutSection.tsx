@@ -1,9 +1,11 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const skills = [
-  "Python", "TypeScript", "React", "Node.js", "Machine Learning",
-  "Computer Vision", "Information Retrieval", "PostgreSQL", "AWS", "Docker",
-  "TensorFlow", "PyTorch", "Next.js", "GraphQL",
+  "Python", "TypeScript", "React", "C++", "OCaml", "Solidity",
+  "FastAPI", "Node.js", "Vite", "Tailwind CSS",
+  "Machine Learning", "Computer Vision", "RAG", "Stable Diffusion",
+  "PyTorch", "scikit-learn", "PostgreSQL", "Supabase", "pgvector",
+  "Docker", "Embedded Systems", "Information Retrieval",
 ];
 
 export const AboutSection = () => {
