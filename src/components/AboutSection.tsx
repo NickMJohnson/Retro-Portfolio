@@ -3,8 +3,8 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 const skills = [
   "Python", "TypeScript", "React", "C++", "OCaml", "Solidity",
   "FastAPI", "Node.js", "Vite", "Tailwind CSS",
-  "Machine Learning", "Computer Vision", "RAG", "Stable Diffusion",
-  "PyTorch", "scikit-learn", "PostgreSQL", "Supabase", "pgvector",
+  "Machine Learning", "Computer Vision", "RAG", "PostgreSQL", "Stable Diffusion",
+  "PyTorch", "scikit-learn", "Supabase", "pgvector",
   "Docker", "Embedded Systems", "Information Retrieval",
 ];
 
