@@ -106,10 +106,15 @@ const projects: Project[] = [
 
 const categories = ["All", "AI/ML", "Web Dev", "Systems", "Creative"];
 
+const PAGE_SIZE = 6;
+
 export const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [showAll, setShowAll] = useState(false);
 
   const filtered = activeCategory === "All" ? projects : projects.filter((p) => p.category === activeCategory);
+  const visible = showAll ? filtered : filtered.slice(0, PAGE_SIZE);
+  const hasMore = filtered.length > PAGE_SIZE;
 
   return (
     <section id="projects">
@@ -124,7 +129,7 @@ export const ProjectsSection = () => {
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => { setActiveCategory(cat); setShowAll(false); }}
                 className={cn(
                   "px-4 py-1.5 text-xs font-mono uppercase tracking-wider transition-all duration-300",
                   activeCategory === cat
@@ -139,7 +144,7 @@ export const ProjectsSection = () => {
         </ScrollReveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filtered.map((project, i) => (
+          {visible.map((project, i) => (
             <ScrollReveal key={project.title} delay={i * 0.05}>
               <div className="group cyber-card h-full flex flex-col transition-all duration-300 hover:shadow-[0_0_20px_hsla(var(--neon-cyan)/0.15)]">
                 <h3 className="font-semibold text-foreground mb-1.5 text-sm">{project.title}</h3>
@@ -171,6 +176,17 @@ export const ProjectsSection = () => {
             </ScrollReveal>
           ))}
         </div>
+
+        {hasMore && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="px-6 py-2 text-xs font-mono uppercase tracking-wider border border-primary text-primary hover:bg-primary/10 transition-all duration-300"
+            >
+              {showAll ? "show_less()" : `load_more() // +${filtered.length - PAGE_SIZE} projects`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
