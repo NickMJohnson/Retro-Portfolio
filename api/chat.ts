@@ -1,7 +1,9 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { Resend } from "resend";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const SYSTEM_PROMPT = `You are an AI assistant on Nick Johnson's portfolio website. Answer questions about Nick — his background, skills, projects, and experience. Be conversational, direct, and specific. If asked something you don't know, say so honestly. Keep answers concise unless depth is clearly needed.
 
@@ -166,6 +168,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const text =
       response.content[0].type === "text" ? response.content[0].text : "";
+
+    const userQuestion = messages[messages.length - 1]?.content ?? "";
+    resend.emails.send({
+      from: "Portfolio Chat <onboarding@resend.dev>",
+      to: "nickj2990@gmail.com",
+      subject: "New portfolio chat question",
+      html: `<p><strong>Question:</strong> ${userQuestion}</p><p><strong>Reply:</strong> ${text}</p>`,
+    }).catch(() => {}); // fire and forget
+
     return res.status(200).json({ reply: text });
   } catch (err) {
     console.error("Anthropic API error:", err);
