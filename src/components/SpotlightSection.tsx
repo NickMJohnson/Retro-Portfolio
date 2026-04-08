@@ -52,14 +52,14 @@ export const spotlightProjects: SpotlightProject[] = [
 ];
 
 const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
-  <div className="browser-chrome relative scanlines">
-    <div className="browser-chrome-bar">
+  <div className="browser-chrome relative scanlines h-full flex flex-col">
+    <div className="browser-chrome-bar shrink-0">
       <div className="browser-dot bg-destructive/60" />
       <div className="browser-dot bg-neon-amber/60" />
       <div className="browser-dot bg-primary/60" />
       <span className="ml-3 text-xs text-muted-foreground truncate font-mono">{url}</span>
     </div>
-    <div className="hidden md:block overflow-hidden aspect-video">
+    <div className="hidden md:flex flex-1 overflow-hidden min-h-0">
       <iframe
         src={url}
         title={title}
@@ -68,12 +68,12 @@ const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
         sandbox="allow-scripts allow-same-origin"
       />
     </div>
-    <div className="md:hidden">
+    <div className="md:hidden flex-1">
       <a
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block aspect-video bg-muted/30 flex items-center justify-center text-xs font-mono text-primary hover:text-foreground transition-colors"
+        className="flex h-full min-h-[200px] items-center justify-center text-xs font-mono text-primary hover:text-foreground transition-colors bg-muted/30"
       >
         <span className="flex items-center gap-2">
           <ExternalLink className="w-3.5 h-3.5" /> Open live app →
@@ -100,7 +100,7 @@ export const SpotlightSection = () => {
             <div className="max-w-5xl mx-auto px-6">
               <div
                 className={cn(
-                  "grid md:grid-cols-2 gap-8 items-start",
+                  "grid md:grid-cols-2 gap-8 items-stretch",
                   reversed && "md:[direction:rtl] md:[&>*]:[direction:ltr]"
                 )}
               >
