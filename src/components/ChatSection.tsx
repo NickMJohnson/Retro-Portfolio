@@ -32,9 +32,12 @@ export const ChatSection = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length <= 1) return;
+    const container = chatContainerRef.current;
+    if (container) container.scrollTop = container.scrollHeight;
   }, [messages]);
 
   const handleSend = async () => {
@@ -71,7 +74,7 @@ export const ChatSection = () => {
 
         <ScrollReveal delay={0.1}>
           <div className="max-w-2xl mx-auto cyber-card !p-0 overflow-hidden">
-            <div className="h-80 overflow-y-auto p-4 space-y-4">
+            <div ref={chatContainerRef} className="h-80 overflow-y-auto p-4 space-y-4">
               {messages.map((msg, i) => (
                 <div key={i} className={cn("flex gap-3", msg.role === "user" && "flex-row-reverse")}>
                   <div
