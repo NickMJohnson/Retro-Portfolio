@@ -56,7 +56,7 @@ const projects: Project[] = [
     description: "Fault-tolerant distributed KV store implementing Raft consensus protocol.",
     tech: ["Go", "gRPC", "Docker"],
     category: "Systems",
-    github: "https://github.com",
+    github: "https://github.com/NickMJohnson/Keyval",
   },
   {
     title: "Real-Time Chat Platform",
