@@ -9,6 +9,7 @@ export interface SpotlightProject {
   liveUrl: string;
   githubUrl?: string;
   iframeUrl: string;
+  iframeScrollOffset?: number; // px to scroll down into the page (in the iframe's coordinate space)
 }
 
 // ============ CONFIGURE YOUR SPOTLIGHT PROJECTS HERE ============
@@ -21,6 +22,7 @@ export const spotlightProjects: SpotlightProject[] = [
     liveUrl: "https://clairvoyant-rouge.vercel.app",
     githubUrl: "https://github.com",
     iframeUrl: "https://clairvoyant-rouge.vercel.app",
+    iframeScrollOffset: 400,
   },
   {
     title: "SolidGuard",
@@ -51,7 +53,7 @@ export const spotlightProjects: SpotlightProject[] = [
   },
 ];
 
-const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
+const BrowserFrame = ({ url, title, scrollOffset = 0 }: { url: string; title: string; scrollOffset?: number }) => (
   <div className="browser-chrome relative scanlines">
     <div className="browser-chrome-bar">
       <div className="browser-dot bg-destructive/60" />
@@ -63,7 +65,8 @@ const BrowserFrame = ({ url, title }: { url: string; title: string }) => (
       <iframe
         src={url}
         title={title}
-        className="w-[200%] h-[200%] border-0 origin-top-left scale-50"
+        className="w-[200%] h-[200%] border-0 origin-top-left"
+        style={{ transform: `scale(0.5) translateY(-${scrollOffset}px)` }}
         loading="lazy"
         sandbox="allow-scripts allow-same-origin"
       />
@@ -104,7 +107,7 @@ export const SpotlightSection = () => {
                   reversed && "md:[direction:rtl] md:[&>*]:[direction:ltr]"
                 )}
               >
-                <BrowserFrame url={project.iframeUrl} title={project.title} />
+                <BrowserFrame url={project.iframeUrl} title={project.title} scrollOffset={project.iframeScrollOffset} />
 
                 <div className="flex flex-col justify-center cyber-card">
                   <h4 className="text-lg font-display font-semibold text-foreground mb-2">{project.title}</h4>
