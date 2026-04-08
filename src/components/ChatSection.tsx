@@ -26,7 +26,7 @@ export const ChatSection = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi! I'm an AI assistant that knows about Nick's projects, skills, and experience. Ask me anything!",
+      content: "Hi! I'm an AI assistant trained on Nick's projects, skills, and experience. Ask me anything!",
     },
   ]);
   const [input, setInput] = useState("");
