@@ -23,6 +23,13 @@ const projects: Project[] = [
     github: "https://github.com/NickMJohnson/Cornell-Rocketry-Autopilot",
   },
   {
+    title: "BRB/USD Trading Platform",
+    description: "Simulated cryptocurrency exchange in OCaml with a price-time priority order matching engine supporting partial fills. Users create accounts, deposit funds, and place buy/sell orders through an interactive CLI with live ASCII order book visualization and JSON-based persistent storage.",
+    tech: ["OCaml", "Functional Programming", "Data Structures", "System Design", "Dune", "Yojson", "OUnit2", "Order Matching Engine"],
+    category: "Systems",
+    github: "https://github.com/NickMJohnson/Auto-Market-Maker-3110",
+  },
+  {
     title: "Legalization Attitude Predictor",
     description: "Classification pipeline trained on General Social Survey data to predict public attitudes toward marijuana legalization. Compared Lasso, Elastic-Net, Random Forest, and Gradient Boosting models with hyperparameter tuning, class imbalance handling via downsampling, and evaluation across sensitivity, specificity, ROC AUC, and Brier score.",
     tech: ["Python", "scikit-learn", "imbalanced-learn", "NumPy", "Matplotlib", "GridSearchCV", "Logistic Regression", "Random Forest", "Gradient Boosting"],
@@ -42,13 +49,6 @@ const projects: Project[] = [
     tech: ["Python", "R", "scikit-learn", "FastAPI", "Vetiver", "Docker", "REST API", "Logistic Regression", "Machine Learning"],
     category: "AI/ML",
     github: "https://github.com/NickMJohnson/proj-01-dank-corgi",
-  },
-  {
-    title: "BRB/USD Trading Platform",
-    description: "Simulated cryptocurrency exchange in OCaml with a price-time priority order matching engine supporting partial fills. Users create accounts, deposit funds, and place buy/sell orders through an interactive CLI with live ASCII order book visualization and JSON-based persistent storage.",
-    tech: ["OCaml", "Functional Programming", "Data Structures", "System Design", "Dune", "Yojson", "OUnit2", "Order Matching Engine"],
-    category: "Systems",
-    github: "https://github.com/NickMJohnson/Auto-Market-Maker-3110",
   },
   {
     title: "Image Eraser",
