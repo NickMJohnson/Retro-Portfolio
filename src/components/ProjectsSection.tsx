@@ -183,7 +183,7 @@ export const ProjectsSection = () => {
               onClick={() => setShowAll((prev) => !prev)}
               className="px-6 py-2 text-xs font-mono uppercase tracking-wider border border-primary text-primary hover:bg-primary/10 transition-all duration-300"
             >
-              {showAll ? "show_less()" : `load_more() // +${filtered.length - PAGE_SIZE} projects`}
+              {showAll ? "show_less()" : "load_more()"}
             </button>
           </div>
         )}
