@@ -20,20 +20,19 @@ export const AboutSection = () => {
             <ScrollReveal>
               <p className="text-foreground/80 leading-relaxed text-sm">
                 I'm a software engineer and AI builder studying at Cornell University. I love working at the
-                intersection of machine learning and product engineering — building systems that are both
-                technically rigorous and genuinely useful.
+                intersection of machine learning and product engineering.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-foreground/80 leading-relaxed text-sm">
-                My work spans computer vision, information retrieval, full-stack web development, and
+                Ive worked on projects spanning computer vision, information retrieval, full-stack web development, and
                 systems programming. I'm particularly drawn to problems where thoughtful engineering
                 decisions can unlock new capabilities.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p className="text-foreground/80 leading-relaxed text-sm">
-                Outside of engineering, I care about clean design, clear writing, and building things
+                Outside of engineering, I care about intuitive design, and building things
                 that people actually want to use.
               </p>
             </ScrollReveal>
