@@ -23,6 +23,13 @@ const projects: Project[] = [
     github: "https://github.com/NickMJohnson/Cornell-Rocketry-Autopilot",
   },
   {
+    title: "Coffee Preference Predictor",
+    description: "Binary classification pipeline predicting whether survey respondents enjoy a specialty coffee, trained on the 2023 Great American Coffee Taste Test dataset. Compares logistic regression, random forest, and gradient boosting models using stratified cross-validation, with probability calibration and ROC/Brier score evaluation.",
+    tech: ["Python", "scikit-learn", "pandas", "Quarto", "Logistic Regression", "Random Forest", "Gradient Boosting", "Cross-Validation", "Model Calibration", "Feature Engineering"],
+    category: "AI/ML",
+    github: "https://github.com/NickMJohnson/Coffee-predict",
+  },
+  {
     title: "NHANES Prediabetes Prediction API",
     description: "ML classifier predicting prediabetes likelihood from self-reported survey data, trained on 5,000+ CDC NHANES respondents. Evaluated four model families via stratified cross-validation, selecting a logistic regression pipeline deployed as a live REST API for use by clinics and community health programs.",
     tech: ["Python", "R", "scikit-learn", "FastAPI", "Vetiver", "Docker", "REST API", "Logistic Regression", "Machine Learning"],
