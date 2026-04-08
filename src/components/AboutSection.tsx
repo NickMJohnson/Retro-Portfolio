@@ -27,7 +27,7 @@ export const AboutSection = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-foreground/80 leading-relaxed text-sm">
-                Ive worked on projects spanning computer vision, information retrieval, full-stack web development, and
+                My work spans computer vision, information retrieval, full-stack web development, and
                 systems programming. I'm particularly drawn to problems where thoughtful engineering
                 decisions can unlock new capabilities.
               </p>
