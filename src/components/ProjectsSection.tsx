@@ -15,6 +15,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Cornell Rocketry Autopilot",
+    description: "GPS-guided parafoil autopilot running on embedded hardware, using sensor fusion of barometric and GPS altitude data to navigate a deployable glider back to a home coordinate.",
+    tech: ["C++", "Arduino", "Embedded Systems", "GPS", "Sensor Fusion", "PID Control", "TinyGPS++", "PWM Servos"],
+    category: "Systems",
+    demo: "https://nickmjohnson.github.io/Cornell-Rocketry-Autopilot/visualization.html",
+    github: "https://github.com/NickMJohnson/Cornell-Rocketry-Autopilot",
+  },
+  {
     title: "NHANES Prediabetes Prediction API",
     description: "ML classifier predicting prediabetes likelihood from self-reported survey data, trained on 5,000+ CDC NHANES respondents. Evaluated four model families via stratified cross-validation, selecting a logistic regression pipeline deployed as a live REST API for use by clinics and community health programs.",
     tech: ["Python", "R", "scikit-learn", "FastAPI", "Vetiver", "Docker", "REST API", "Logistic Regression", "Machine Learning"],
@@ -27,14 +35,6 @@ const projects: Project[] = [
     tech: ["OCaml", "Functional Programming", "Data Structures", "System Design", "Dune", "Yojson", "OUnit2", "Order Matching Engine"],
     category: "Systems",
     github: "https://github.com/NickMJohnson/Auto-Market-Maker-3110",
-  },
-  {
-    title: "Cornell Rocketry Autopilot",
-    description: "GPS-guided parafoil autopilot running on embedded hardware, using sensor fusion of barometric and GPS altitude data to navigate a deployable glider back to a home coordinate.",
-    tech: ["C++", "Arduino", "Embedded Systems", "GPS", "Sensor Fusion", "PID Control", "TinyGPS++", "PWM Servos"],
-    category: "Systems",
-    demo: "https://nickmjohnson.github.io/Cornell-Rocketry-Autopilot/visualization.html",
-    github: "https://github.com/NickMJohnson/Cornell-Rocketry-Autopilot",
   },
   {
     title: "Image Eraser",
