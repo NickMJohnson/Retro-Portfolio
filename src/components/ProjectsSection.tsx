@@ -37,14 +37,6 @@ const projects: Project[] = [
     github: "https://github.com/NickMJohnson/RAG-tutuor-bot/commits/main/",
   },
   {
-    title: "Nick Johnson Portfolio",
-    description: "This portfolio site — a retro-futuristic single-page app with featured project spotlights, an AI chat assistant trained on my background, contact form, and animated hero. Built with React, TypeScript, and Tailwind, deployed on Vercel with a serverless API layer.",
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Vercel", "Claude API", "Resend"],
-    categories: ["Web Dev"],
-    demo: "https://nickjohnson.site",
-    github: "https://github.com/NickMJohnson",
-  },
-  {
     title: "Legalization Attitude Predictor",
     description: "Classification pipeline trained on General Social Survey data to predict public attitudes toward marijuana legalization. Compared Lasso, Elastic-Net, Random Forest, and Gradient Boosting models with hyperparameter tuning, class imbalance handling via downsampling, and evaluation across sensitivity, specificity, ROC AUC, and Brier score.",
     tech: ["Python", "scikit-learn", "imbalanced-learn", "NumPy", "Matplotlib", "GridSearchCV", "Logistic Regression", "Random Forest", "Gradient Boosting"],
@@ -85,6 +77,14 @@ const projects: Project[] = [
     tech: ["Python", "FAISS", "CLIP", "FastAPI"],
     categories: ["AI/ML"],
     github: "https://github.com",
+  },
+  {
+    title: "Nick Johnson Portfolio",
+    description: "This portfolio site — a retro-futuristic single-page app with featured project spotlights, an AI chat assistant trained on my background, contact form, and animated hero. Built with React, TypeScript, and Tailwind, deployed on Vercel with a serverless API layer.",
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Vercel", "Claude API", "Resend"],
+    categories: ["Web Dev"],
+    demo: "https://nickjohnson.site",
+    github: "https://github.com/NickMJohnson",
   },
   {
     title: "LLM Policy Classification Benchmark",
