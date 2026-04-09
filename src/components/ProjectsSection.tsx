@@ -84,7 +84,7 @@ const projects: Project[] = [
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Vercel", "Claude API", "Resend"],
     categories: ["Web Dev"],
     demo: "https://nickjohnson.site",
-    github: "https://github.com/NickMJohnson",
+    github: "https://github.com/NickMJohnson/Retro-Portfolio",
   },
   {
     title: "LLM Policy Classification Benchmark",
