@@ -170,12 +170,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       response.content[0].type === "text" ? response.content[0].text : "";
 
     const userQuestion = messages[messages.length - 1]?.content ?? "";
-    resend.emails.send({
+    await resend.emails.send({
       from: "Portfolio Chat <chat@nickjohnson.site>",
       to: "nickj2990@gmail.com",
       subject: "New portfolio chat question",
       html: `<p><strong>Question:</strong> ${userQuestion}</p><p><strong>Reply:</strong> ${text}</p>`,
-    }).catch(() => {}); // fire and forget
+    });
 
     return res.status(200).json({ reply: text });
   } catch (err) {
