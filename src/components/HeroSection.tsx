@@ -1,7 +1,50 @@
 import { ArrowDown, Terminal } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useState, useEffect } from "react";
+
+const GLITCH_CHARS = "!<>-_\\/[]{}—=+*^?#@$%&";
+
+const useTypingGlitch = (finalText: string, delay = 0) => {
+  const [display, setDisplay] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+    timeout = setTimeout(() => {
+      let frame = 0;
+      const totalFrames = finalText.length * 5;
+      const interval = setInterval(() => {
+        const progress = frame / totalFrames;
+        const revealedCount = Math.floor(progress * finalText.length);
+        const scrambled = finalText
+          .split("")
+          .map((char, i) => {
+            if (char === " ") return " ";
+            if (i < revealedCount) return char;
+            if (i === revealedCount) return GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)];
+            return GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)];
+          })
+          .join("");
+        setDisplay(scrambled);
+        frame++;
+        if (frame > totalFrames) {
+          clearInterval(interval);
+          setDisplay(finalText);
+          setDone(true);
+        }
+      }, 40);
+      return () => clearInterval(interval);
+    }, delay);
+    return () => clearTimeout(timeout);
+  }, [finalText, delay]);
+
+  return { display, done };
+};
 
 export const HeroSection = () => {
+  const nick = useTypingGlitch("Nick", 300);
+  const johnson = useTypingGlitch("Johnson", 600);
+
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
       <div className="section-container w-full">
@@ -12,9 +55,9 @@ export const HeroSection = () => {
           </div>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold tracking-tight mb-4 glitch-hover">
-            <span className="neon-text">Nick</span>{" "}
-            <span className="neon-text-magenta">Johnson</span>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold tracking-tight mb-4">
+            <span className="neon-text font-mono">{nick.display}</span>{" "}
+            <span className="neon-text-magenta font-mono">{johnson.display}</span>
           </h1>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
