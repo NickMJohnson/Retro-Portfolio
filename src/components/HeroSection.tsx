@@ -1,5 +1,6 @@
 import { ArrowDown, Terminal } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { ParticleGrid } from "@/components/ParticleGrid";
 import { useState, useEffect } from "react";
 
 const GLITCH_CHARS = "!<>-_\\/[]{}—=+*^?#@$%&";
@@ -47,7 +48,8 @@ export const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
-      <div className="section-container w-full">
+      <ParticleGrid />
+      <div className="section-container w-full relative z-10">
         <ScrollReveal>
           <div className="flex items-center gap-2 mb-6">
             <Terminal className="w-4 h-4 text-primary" />
