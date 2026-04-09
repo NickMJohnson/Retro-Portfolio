@@ -65,27 +65,11 @@ const projects: Project[] = [
     github: "https://github.com/NickMJohnson/ImageEraser",
   },
   {
-    title: "Neural Style Transfer App",
-    description: "Real-time neural style transfer using optimized CNN architectures with a web interface.",
-    tech: ["Python", "PyTorch", "React", "FastAPI"],
-    category: "AI/ML",
-    demo: "https://example.com",
-    github: "https://github.com",
-  },
-  {
     title: "Distributed Key-Value Store",
     description: "Fault-tolerant distributed KV store implementing Raft consensus protocol.",
     tech: ["Go", "gRPC", "Docker"],
     category: "Systems",
     github: "https://github.com/NickMJohnson/Keyval",
-  },
-  {
-    title: "Real-Time Chat Platform",
-    description: "Scalable real-time messaging with WebSocket support and end-to-end encryption.",
-    tech: ["TypeScript", "React", "Node.js", "Redis"],
-    category: "Web Dev",
-    demo: "https://example.com",
-    github: "https://github.com",
   },
   {
     title: "Image Search Engine",
@@ -95,26 +79,11 @@ const projects: Project[] = [
     github: "https://github.com",
   },
   {
-    title: "Generative Art Tool",
-    description: "Interactive canvas for creating procedural art with exportable SVG output.",
-    tech: ["TypeScript", "Canvas API", "React"],
-    category: "Creative",
-    demo: "https://example.com",
-    github: "https://github.com",
-  },
-  {
     title: "LLM Policy Classification Benchmark",
     description: "Benchmarked a 3×3 grid of OpenAI models (GPT-4.1, GPT-5-nano, GPT-5) against naive, detailed, and chain-of-thought prompts on a U.S. legislative bill classification task using the Comparative Agendas Project taxonomy. Used batch inference to minimize cost and evaluated results across accuracy, macro F1, sensitivity, and specificity.",
     tech: ["Python", "OpenAI API", "Prompt Engineering", "Batch Inference", "chatlas", "scikit-learn", "Pandas"],
     category: "AI/ML",
     github: "https://github.com/NickMJohnson/RAG-tutuor-bot/commits/main/",
-  },
-  {
-    title: "Personal Finance Tracker",
-    description: "Budget tracking app with bank sync, spending analytics, and goal setting.",
-    tech: ["React", "Supabase", "Plaid API", "Recharts"],
-    category: "Web Dev",
-    demo: "https://example.com",
   },
 ];
 
