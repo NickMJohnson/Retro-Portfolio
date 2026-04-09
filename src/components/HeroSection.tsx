@@ -69,7 +69,7 @@ export const HeroSection = () => {
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
           <div className="flex gap-4">
-            <a href="#projects" className="neon-btn">
+            <a href="#spotlight" className="neon-btn">
               View Projects
             </a>
             <a href="#resume" className="neon-btn neon-btn-magenta">

@@ -92,7 +92,7 @@ const BrowserFrame = ({ url, title, scrollOffset = 0 }: { url: string; title: st
 
 export const SpotlightSection = () => {
   return (
-    <div className="space-y-20 mt-16">
+    <div id="spotlight" className="space-y-20 mt-16">
       <ScrollReveal>
         <div className="section-container !py-0">
           <h3 className="text-xl font-display font-semibold mb-1"><span className="gradient-text">Featured Spotlights</span></h3>
