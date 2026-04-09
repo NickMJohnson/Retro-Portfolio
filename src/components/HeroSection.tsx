@@ -42,6 +42,24 @@ const useTypingGlitch = (finalText: string, delay = 0) => {
   return { display, done };
 };
 
+const slowScrollTo = (id: string, duration = 1800) => {
+  const target = document.getElementById(id);
+  if (!target) return;
+  const start = window.scrollY;
+  const end = target.getBoundingClientRect().top + start;
+  const startTime = performance.now();
+
+  const ease = (t: number) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+  const step = (now: number) => {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    window.scrollTo(0, start + (end - start) * ease(progress));
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
+
 export const HeroSection = () => {
   const nick = useTypingGlitch("Nick", 300);
   const johnson = useTypingGlitch("Johnson", 600);
@@ -69,9 +87,9 @@ export const HeroSection = () => {
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
           <div className="flex gap-4">
-            <a href="#spotlight" className="neon-btn">
+            <button onClick={() => slowScrollTo("spotlight")} className="neon-btn">
               View Projects
-            </a>
+            </button>
             <a href="#resume" className="neon-btn neon-btn-magenta">
               Resume
             </a>

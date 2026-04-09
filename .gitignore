@@ -13,6 +13,7 @@ dist-ssr
 *.local
 
 notes.md
+CLAUDE.md
 
 # Editor directories and files
 .vscode/*
