@@ -1,6 +1,6 @@
 import { ArrowDown, Terminal } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { ParticleGrid } from "@/components/ParticleGrid";
+import ParticleGrid from "@/components/ParticleGrid";
 import { useState, useEffect } from "react";
 
 const GLITCH_CHARS = "!<>-_\\/[]{}—=+*^?#@$%&";
