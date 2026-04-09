@@ -1,6 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { cn } from "@/lib/utils";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export interface SpotlightProject {
   title: string;
@@ -90,6 +92,47 @@ const BrowserFrame = ({ url, title, scrollOffset = 0 }: { url: string; title: st
   </div>
 );
 
+const SpotlightCard = ({ project, reversed }: { project: SpotlightProject; reversed: boolean }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const rotateX = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [8, 0, 0, -8]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [40, 0, 0, -40]);
+
+  return (
+    <motion.div ref={ref} style={{ opacity, y }} className="max-w-5xl mx-auto px-6">
+      <motion.div
+        style={{ rotateX, transformPerspective: 1200 }}
+        className={cn(
+          "grid md:grid-cols-2 gap-8 items-start",
+          reversed && "md:[direction:rtl] md:[&>*]:[direction:ltr]"
+        )}
+      >
+        <BrowserFrame url={project.iframeUrl} title={project.title} scrollOffset={project.iframeScrollOffset} />
+        <div className="flex flex-col justify-center cyber-card">
+          <h4 className="text-lg font-display font-semibold text-foreground mb-2">{project.title}</h4>
+          <p className="text-xs text-muted-foreground mb-4 leading-relaxed font-mono">{project.description}</p>
+          <div className="flex flex-wrap gap-1.5 mb-5">
+            {project.tech.map((t) => (
+              <span key={t} className="tag-chip">{t}</span>
+            ))}
+          </div>
+          <div className="flex gap-3">
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="neon-btn text-xs">
+              <ExternalLink className="w-3 h-3 inline mr-1.5" /> Visit Live
+            </a>
+            {project.githubUrl && (
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="neon-btn neon-btn-magenta text-xs">
+                <Github className="w-3 h-3 inline mr-1.5" /> Source
+              </a>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 export const SpotlightSection = () => {
   return (
     <div className="space-y-20 mt-16">
@@ -103,40 +146,7 @@ export const SpotlightSection = () => {
       {spotlightProjects.map((project, i) => {
         const reversed = i % 2 !== 0;
         return (
-          <ScrollReveal key={project.title} delay={0.1}>
-            <div className="max-w-5xl mx-auto px-6">
-              <div
-                className={cn(
-                  "grid md:grid-cols-2 gap-8 items-start",
-                  reversed && "md:[direction:rtl] md:[&>*]:[direction:ltr]"
-                )}
-              >
-                <BrowserFrame url={project.iframeUrl} title={project.title} scrollOffset={project.iframeScrollOffset} />
-
-                <div className="flex flex-col justify-center cyber-card">
-                  <h4 className="text-lg font-display font-semibold text-foreground mb-2">{project.title}</h4>
-                  <p className="text-xs text-muted-foreground mb-4 leading-relaxed font-mono">{project.description}</p>
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {project.tech.map((t) => (
-                      <span key={t} className="tag-chip">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-3">
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="neon-btn text-xs">
-                      <ExternalLink className="w-3 h-3 inline mr-1.5" /> Visit Live
-                    </a>
-                    {project.githubUrl && (
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="neon-btn neon-btn-magenta text-xs">
-                        <Github className="w-3 h-3 inline mr-1.5" /> Source
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
+          <SpotlightCard key={project.title} project={project} reversed={reversed} />
         );
       })}
     </div>
