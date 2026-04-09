@@ -1,4 +1,32 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
+
+const WordReveal = ({ text, className }: { text: string; className?: string }) => {
+  const ref = useRef<HTMLParagraphElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.9", "start 0.25"] });
+  const words = text.split(" ");
+
+  return (
+    <p ref={ref} className={className}>
+      {words.map((word, i) => {
+        const start = i / words.length;
+        const end = start + 1 / words.length;
+        return <AnimatedWord key={i} progress={scrollYProgress} range={[start, end]}>{word}</AnimatedWord>;
+      })}
+    </p>
+  );
+};
+
+const AnimatedWord = ({ children, progress, range }: { children: string; progress: any; range: [number, number] }) => {
+  const opacity = useTransform(progress, range, [0.15, 1]);
+  const color = useTransform(progress, range, ["hsl(170 100% 50% / 0.3)", "hsl(0 0% 100% / 0.8)"]);
+  return (
+    <motion.span style={{ opacity, color }} className="inline-block mr-[0.25em]">
+      {children}
+    </motion.span>
+  );
+};
 
 const skills = [
   "Python", "TypeScript", "React", "C++", "OCaml", "Solidity",
@@ -19,12 +47,10 @@ export const AboutSection = () => {
 
         <div className="grid md:grid-cols-5 gap-6">
           <div className="md:col-span-3 cyber-card space-y-4">
-            <ScrollReveal>
-              <p className="text-foreground/80 leading-relaxed text-sm">
-                I build things that fly, trade, and think. I'm a CS student at Cornell who's shipped full-stack web apps,
-                written flight software for a steerable parachute, founded a few companies, and trained ML models on real-world data.
-              </p>
-            </ScrollReveal>
+            <WordReveal
+              text="I build things that fly, trade, and think. I'm a CS student at Cornell who's shipped full-stack web apps, written flight software for a steerable parachute, founded a few companies, and trained ML models on real-world data."
+              className="leading-relaxed text-sm"
+            />
             <ScrollReveal delay={0.1}>
               <p className="text-foreground/80 leading-relaxed text-sm">
                 At Cornell Rocketry I worked on an autopilot system to guide our payload back to the launch site.
