@@ -171,7 +171,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const userQuestion = messages[messages.length - 1]?.content ?? "";
     resend.emails.send({
-      from: "Portfolio Chat <onboarding@resend.dev>",
+      from: "Portfolio Chat <chat@nickjohnson.site>",
       to: "nickj2990@gmail.com",
       subject: "New portfolio chat question",
       html: `<p><strong>Question:</strong> ${userQuestion}</p><p><strong>Reply:</strong> ${text}</p>`,
