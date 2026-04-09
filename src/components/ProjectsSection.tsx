@@ -30,6 +30,13 @@ const projects: Project[] = [
     github: "https://github.com/NickMJohnson/Auto-Market-Maker-3110",
   },
   {
+    title: "RAG Course Tutor Chatbot",
+    description: "Course tutor chatbot for Cornell's INFO 4940/5940 using Python Shiny and GPT-4.1-mini. Uses Retrieval-Augmented Generation to ground responses in course documents including the syllabus and homework assignments. Features a sidebar for help mode and language preference, with guardrails to guide rather than solve for students.",
+    tech: ["Python", "OpenAI API", "RAG", "Python Shiny", "chatlas", "Posit Connect"],
+    category: "AI/ML",
+    github: "https://github.com/NickMJohnson/RAG-tutuor-bot/commits/main/",
+  },
+  {
     title: "Legalization Attitude Predictor",
     description: "Classification pipeline trained on General Social Survey data to predict public attitudes toward marijuana legalization. Compared Lasso, Elastic-Net, Random Forest, and Gradient Boosting models with hyperparameter tuning, class imbalance handling via downsampling, and evaluation across sensitivity, specificity, ROC AUC, and Brier score.",
     tech: ["Python", "scikit-learn", "imbalanced-learn", "NumPy", "Matplotlib", "GridSearchCV", "Logistic Regression", "Random Forest", "Gradient Boosting"],
@@ -94,6 +101,13 @@ const projects: Project[] = [
     category: "Creative",
     demo: "https://example.com",
     github: "https://github.com",
+  },
+  {
+    title: "LLM Policy Classification Benchmark",
+    description: "Benchmarked a 3×3 grid of OpenAI models (GPT-4.1, GPT-5-nano, GPT-5) against naive, detailed, and chain-of-thought prompts on a U.S. legislative bill classification task using the Comparative Agendas Project taxonomy. Used batch inference to minimize cost and evaluated results across accuracy, macro F1, sensitivity, and specificity.",
+    tech: ["Python", "OpenAI API", "Prompt Engineering", "Batch Inference", "chatlas", "scikit-learn", "Pandas"],
+    category: "AI/ML",
+    github: "https://github.com/NickMJohnson/RAG-tutuor-bot/commits/main/",
   },
   {
     title: "Personal Finance Tracker",
