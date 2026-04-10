@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const WordReveal = ({ text, className }: { text: string; className?: string }) => {
   const ref = useRef<HTMLParagraphElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.9", "start 0.25"] });
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.9", "start 0.55"] });
   const words = text.split(" ");
 
   return (
