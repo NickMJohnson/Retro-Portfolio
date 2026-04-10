@@ -79,6 +79,13 @@ const projects: Project[] = [
     github: "https://github.com",
   },
   {
+    title: "Automatic Differentiation Engine",
+    description: "Built a backpropagation engine from scratch in pure NumPy, implementing a computation graph with forward and backward passes. Verified correctness using numerical gradient checks.",
+    tech: ["Python", "NumPy", "Automatic Differentiation", "Backpropagation", "Gradient Descent"],
+    categories: ["AI/ML"],
+    github: "https://github.com/NickMJohnson/Automatic-Differentiation-Engine.git",
+  },
+  {
     title: "Nick Johnson Portfolio",
     description: "This portfolio site — a retro-futuristic single-page app with featured project spotlights, an AI chat assistant trained on my background, contact form, and animated hero. Built with React, TypeScript, and Tailwind, deployed on Vercel with a serverless API layer.",
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Vercel", "Claude API", "Resend"],
