@@ -29,10 +29,10 @@ const AnimatedWord = ({ children, progress, range }: { children: string; progres
 };
 
 const skills = [
-  "Python", "TypeScript", "React", "C++", "OCaml", "Solidity",
-  "FastAPI", "Node.js", "Vite", "Tailwind CSS",
-  "Machine Learning", "Computer Vision", "RAG", "PostgreSQL", "Stable Diffusion",
-  "PyTorch", "scikit-learn", "Supabase", "pgvector",
+  "Python", "TypeScript", "Java", "C++", "OCaml", "Solidity", "Go", "R", "SQL",
+  "React", "FastAPI", "Node.js", "Vite", "Tailwind CSS",
+  "Machine Learning", "Computer Vision", "RAG", "Stable Diffusion",
+  "PyTorch", "scikit-learn", "PostgreSQL", "Supabase", "pgvector",
   "Docker", "Embedded Systems", "Information Retrieval",
 ];
 
