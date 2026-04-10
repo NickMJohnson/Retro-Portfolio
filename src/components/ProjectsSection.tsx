@@ -34,14 +34,14 @@ const projects: Project[] = [
     description: "Course tutor chatbot for Cornell's INFO 4940/5940 using Python Shiny and GPT-4.1-mini. Uses Retrieval-Augmented Generation to ground responses in course documents including the syllabus and homework assignments. Features a sidebar for help mode and language preference, with guardrails to guide rather than solve for students.",
     tech: ["Python", "OpenAI API", "RAG", "Python Shiny", "chatlas", "Posit Connect"],
     categories: ["AI/ML", "Web Dev"],
-    github: "https://github.com/NickMJohnson/RAG-tutuor-bot/commits/main/",
+    github: "https://github.com/NickMJohnson/RAG-tutuor-bot",
   },
   {
-    title: "Legalization Attitude Predictor",
-    description: "Classification pipeline trained on General Social Survey data to predict public attitudes toward marijuana legalization. Compared Lasso, Elastic-Net, Random Forest, and Gradient Boosting models with hyperparameter tuning, class imbalance handling via downsampling, and evaluation across sensitivity, specificity, ROC AUC, and Brier score.",
-    tech: ["Python", "scikit-learn", "imbalanced-learn", "NumPy", "Matplotlib", "GridSearchCV", "Logistic Regression", "Random Forest", "Gradient Boosting"],
-    categories: ["AI/ML"],
-    github: "https://github.com/NickMJohnson/hw-03-nmj37",
+    title: "NHANES Prediabetes Prediction API",
+    description: "ML classifier predicting prediabetes likelihood from self-reported survey data, trained on 5,000+ CDC NHANES respondents. Evaluated four model families via stratified cross-validation, selecting a logistic regression pipeline deployed as a live REST API for use by clinics and community health programs.",
+    tech: ["Python", "R", "scikit-learn", "FastAPI", "Vetiver", "Docker", "REST API", "Logistic Regression", "Machine Learning"],
+    categories: ["AI/ML", "Web Dev"],
+    github: "https://github.com/NickMJohnson/proj-01-dank-corgi",
   },
   {
     title: "Coffee Preference Predictor",
@@ -51,11 +51,18 @@ const projects: Project[] = [
     github: "https://github.com/NickMJohnson/Coffee-predict",
   },
   {
-    title: "NHANES Prediabetes Prediction API",
-    description: "ML classifier predicting prediabetes likelihood from self-reported survey data, trained on 5,000+ CDC NHANES respondents. Evaluated four model families via stratified cross-validation, selecting a logistic regression pipeline deployed as a live REST API for use by clinics and community health programs.",
-    tech: ["Python", "R", "scikit-learn", "FastAPI", "Vetiver", "Docker", "REST API", "Logistic Regression", "Machine Learning"],
+    title: "Automatic Differentiation Engine",
+    description: "Built a backpropagation engine from scratch in pure NumPy, implementing a computation graph with forward and backward passes. Verified correctness using numerical gradient checks.",
+    tech: ["Python", "NumPy", "Automatic Differentiation", "Backpropagation", "Gradient Descent"],
     categories: ["AI/ML"],
-    github: "https://github.com/NickMJohnson/proj-01-dank-corgi",
+    github: "https://github.com/NickMJohnson/Automatic-Differentiation-Engine.git",
+  },
+  {
+    title: "Legalization Attitude Predictor",
+    description: "Classification pipeline trained on General Social Survey data to predict public attitudes toward marijuana legalization. Compared Lasso, Elastic-Net, Random Forest, and Gradient Boosting models with hyperparameter tuning, class imbalance handling via downsampling, and evaluation across sensitivity, specificity, ROC AUC, and Brier score.",
+    tech: ["Python", "scikit-learn", "imbalanced-learn", "NumPy", "Matplotlib", "GridSearchCV", "Logistic Regression", "Random Forest", "Gradient Boosting"],
+    categories: ["AI/ML"],
+    github: "https://github.com/NickMJohnson/hw-03-nmj37",
   },
   {
     title: "Image Eraser",
@@ -79,13 +86,6 @@ const projects: Project[] = [
     github: "https://github.com",
   },
   {
-    title: "Automatic Differentiation Engine",
-    description: "Built a backpropagation engine from scratch in pure NumPy, implementing a computation graph with forward and backward passes. Verified correctness using numerical gradient checks.",
-    tech: ["Python", "NumPy", "Automatic Differentiation", "Backpropagation", "Gradient Descent"],
-    categories: ["AI/ML"],
-    github: "https://github.com/NickMJohnson/Automatic-Differentiation-Engine.git",
-  },
-  {
     title: "Nick Johnson Portfolio",
     description: "This portfolio site — a retro-futuristic single-page app with featured project spotlights, an AI chat assistant trained on my background, contact form, and animated hero. Built with React, TypeScript, and Tailwind, deployed on Vercel with a serverless API layer.",
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Vercel", "Claude API", "Resend"],
@@ -98,7 +98,7 @@ const projects: Project[] = [
     description: "Benchmarked a 3×3 grid of OpenAI models (GPT-4.1, GPT-5-nano, GPT-5) against naive, detailed, and chain-of-thought prompts on a U.S. legislative bill classification task using the Comparative Agendas Project taxonomy. Used batch inference to minimize cost and evaluated results across accuracy, macro F1, sensitivity, and specificity.",
     tech: ["Python", "OpenAI API", "Prompt Engineering", "Batch Inference", "chatlas", "scikit-learn", "Pandas"],
     categories: ["AI/ML"],
-    github: "https://github.com/NickMJohnson/RAG-tutuor-bot/commits/main/",
+    github: "https://github.com/NickMJohnson/RAG-tutuor-bot",
   },
 ];
 
