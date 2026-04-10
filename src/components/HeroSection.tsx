@@ -66,7 +66,7 @@ export const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
-      <FloatingCode />
+      {/* <FloatingCode /> */}
       <div className="section-container w-full relative z-10">
         <ScrollReveal>
           <div className="flex items-center gap-2 mb-6">
