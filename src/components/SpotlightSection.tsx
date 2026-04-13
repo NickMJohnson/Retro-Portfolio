@@ -21,7 +21,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["Python", "TypeScript", "React", "FastAPI", "PostgreSQL", "pgvector", "OpenCLIP", "Docker", "Tailwind CSS", "ffmpeg"],
     liveUrl: "https://clairvoyant-rouge.vercel.app",
     githubUrl: "https://github.com",
-    iframeUrl: "clairvoyant.app",
+    iframeUrl: "https://clairvoyant.app",
     iframeScrollOffset: 710,
   },
   {
@@ -31,7 +31,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "shadcn/ui", "Monaco Editor", "Python", "FastAPI", "Pydantic", "OpenAI API", "RAG", "NumPy", "Solidity", "Vercel", "Render"],
     liveUrl: "https://solidguard.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/SolidGuard",
-    iframeUrl: "solidguard.app",
+    iframeUrl: "https://solidguard.app",
   },
   {
     title: "Billable",
