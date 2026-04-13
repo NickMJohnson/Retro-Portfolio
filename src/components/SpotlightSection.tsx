@@ -21,7 +21,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["Python", "TypeScript", "React", "FastAPI", "PostgreSQL", "pgvector", "OpenCLIP", "Docker", "Tailwind CSS", "ffmpeg"],
     liveUrl: "https://clairvoyant-rouge.vercel.app",
     githubUrl: "https://github.com",
-    iframeUrl: "https://clairvoyant-rouge.vercel.app",
+    iframeUrl: "clairvoyant.app",
     iframeScrollOffset: 710,
   },
   {
@@ -31,7 +31,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "shadcn/ui", "Monaco Editor", "Python", "FastAPI", "Pydantic", "OpenAI API", "RAG", "NumPy", "Solidity", "Vercel", "Render"],
     liveUrl: "https://solidguard.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/SolidGuard",
-    iframeUrl: "https://solidguard.vercel.app",
+    iframeUrl: "solidguard.app",
   },
   {
     title: "Billable",
@@ -40,7 +40,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL", "shadcn/ui", "Resend", "jsPDF"],
     liveUrl: "https://hourly-halo.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/hourly-halo",
-    iframeUrl: "https://hourly-halo.vercel.app",
+    iframeUrl: "https://hourly-halo.app",
   },
   {
     title: "StockGPT",
@@ -49,7 +49,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Recharts", "Python", "FastAPI", "Pydantic", "SEC EDGAR API", "Claude API", "Vercel", "Railway"],
     liveUrl: "https://stock-gpt-five.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/StockGPT",
-    iframeUrl: "https://stock-gpt-five.vercel.app",
+    iframeUrl: "https://stock-gpt.app",
   },
 ];
 
