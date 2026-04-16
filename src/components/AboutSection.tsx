@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { skillGroups } from "@/lib/resume-data";
 
 const WordReveal = ({ text, className }: { text: string; className?: string }) => {
   const ref = useRef<HTMLParagraphElement>(null);
@@ -27,13 +28,6 @@ const AnimatedWord = ({ children, progress, range }: { children: string; progres
     </motion.span>
   );
 };
-
-const skillGroups = [
-  { label: "Languages", skills: ["Python", "Java", "TypeScript", "C++", "OCaml", "Solidity"] },
-  { label: "Frontend", skills: ["React", "Tailwind CSS", "Vite", "Figma"] },
-  { label: "Backend", skills: ["Node.js", "FastAPI", "PostgreSQL", "Docker"] },
-  { label: "AI / ML", skills: ["PyTorch", "TensorFlow","Scikit-learn", "RAG", "Agentic AI", "OpenCV"] },
-];
 
 export const AboutSection = () => {
   return (
