@@ -10,6 +10,14 @@ export interface SkillGroup {
   skills: string[];
 }
 
+export interface ResumeProject {
+  period: string;
+  title: string;
+  tagline: string;
+  tech: string[];
+  link?: string;
+}
+
 export const summary =
   "CS student at Cornell (B.E., May 2026). Full-stack developer and AI builder with experience shipping embedded flight software, production web apps, and ML pipelines. Multiple-time founder.";
 
@@ -85,6 +93,43 @@ export const leadership: TimelineItem[] = [
     organization: "Light My Fire Camp",
     description:
       "Founded a camp matching middle school students with high schoolers to collaborate on self-chosen projects. Fundraised to make participation fully free for all accepted students.",
+  },
+];
+
+export const projects: ResumeProject[] = [
+  {
+    period: "Jan 2026 — Apr 2026",
+    title: "Clairvoyant Crime Search",
+    tagline:
+      "AI-powered video surveillance search engine. Investigators type natural language queries (\"person with yellow backpack\") and surface matching clips across all cameras, ranked by visual similarity with per-query bounding-box grounding.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "pgvector",
+      "OpenCLIP",
+      "React",
+      "TypeScript",
+      "Docker",
+      "ffmpeg",
+    ],
+    link: "https://clairvoyant-rouge.vercel.app",
+  },
+  {
+    period: "Jan 2025 — May 2025",
+    title: "SolidGuard",
+    tagline:
+      "Smart-contract security tool built for Cornell's Explorations in ML course. Engineered a reproducible dataset pipeline generating paired malicious and safe Solidity contracts, ran Slither static analysis, and flagged common attack vulnerabilities.",
+    tech: [
+      "Python",
+      "Solidity",
+      "FastAPI",
+      "OpenAI API",
+      "RAG",
+      "React",
+      "TypeScript",
+    ],
+    link: "https://solidguard.vercel.app",
   },
 ];
 

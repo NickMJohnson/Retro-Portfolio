@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowLeft, Download, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 import {
   education,
   experience,
   leadership,
+  projects,
   skillGroups,
   summary,
+  type ResumeProject,
   type TimelineItem,
 } from "@/lib/resume-data";
 
@@ -29,6 +31,37 @@ const TimelineBlock = ({ items }: { items: TimelineItem[] }) => (
         ) : (
           <p className="text-xs text-muted-foreground leading-relaxed">{item.description}</p>
         )}
+      </article>
+    ))}
+  </div>
+);
+
+const ProjectBlock = ({ items }: { items: ResumeProject[] }) => (
+  <div className="space-y-6">
+    {items.map((item) => (
+      <article key={item.title} className="border-l-2 border-accent/40 pl-4">
+        <p className="text-xs font-mono text-muted-foreground mb-1">{item.period}</p>
+        <div className="flex items-center gap-2 flex-wrap">
+          <h3 className="font-medium text-foreground text-sm">{item.title}</h3>
+          {item.link && (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs font-mono text-primary hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" /> live
+            </a>
+          )}
+        </div>
+        <p className="text-xs text-muted-foreground leading-relaxed mt-1.5">{item.tagline}</p>
+        <div className="flex flex-wrap gap-1.5 mt-2">
+          {item.tech.map((t) => (
+            <span key={t} className="tag-chip">
+              {t}
+            </span>
+          ))}
+        </div>
       </article>
     ))}
   </div>
@@ -121,16 +154,23 @@ const Resume = () => {
 
           <section className="mb-10">
             <h2 className="text-xs font-mono text-primary uppercase tracking-wider mb-4">
-              &gt; experience
+              &gt; education
             </h2>
-            <TimelineBlock items={experience} />
+            <TimelineBlock items={education} />
           </section>
 
           <section className="mb-10">
             <h2 className="text-xs font-mono text-primary uppercase tracking-wider mb-4">
-              &gt; education
+              &gt; projects
             </h2>
-            <TimelineBlock items={education} />
+            <ProjectBlock items={projects} />
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xs font-mono text-primary uppercase tracking-wider mb-4">
+              &gt; experience
+            </h2>
+            <TimelineBlock items={experience} />
           </section>
 
           <section className="mb-10">
