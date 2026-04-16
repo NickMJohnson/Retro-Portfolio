@@ -6,13 +6,17 @@ export interface SpotlightProject {
   title: string;
   description: string;
   tech: string[];
-  liveUrl: string;
+  liveUrl: string; // where "Visit Live" goes AND the iframe src — must allow framing
   githubUrl?: string;
-  iframeUrl: string;
+  displayUrl?: string; // cosmetic label shown in the fake browser chrome; falls back to liveUrl
   iframeScrollOffset?: number; // px to scroll down into the page (in the iframe's coordinate space)
 }
 
 // ============ CONFIGURE YOUR SPOTLIGHT PROJECTS HERE ============
+// Note: the iframe src uses `liveUrl`. Custom domains like `*.app` often set
+// `X-Frame-Options` / `frame-ancestors` that block embedding — keep `liveUrl` on
+// a vercel.app subdomain (or another frame-friendly origin) and use `displayUrl`
+// only for the pretty label in the fake browser chrome.
 export const spotlightProjects: SpotlightProject[] = [
   {
     title: "Clairvoyant Crime Search",
@@ -21,7 +25,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["Python", "TypeScript", "React", "FastAPI", "PostgreSQL", "pgvector", "OpenCLIP", "Docker", "Tailwind CSS", "ffmpeg"],
     liveUrl: "https://clairvoyant-rouge.vercel.app",
     githubUrl: "https://github.com",
-    iframeUrl: "https://clairvoyant.app",
+    displayUrl: "https://clairvoyant.app",
     iframeScrollOffset: 710,
   },
   {
@@ -31,7 +35,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "shadcn/ui", "Monaco Editor", "Python", "FastAPI", "Pydantic", "OpenAI API", "RAG", "NumPy", "Solidity", "Vercel", "Render"],
     liveUrl: "https://solidguard.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/SolidGuard",
-    iframeUrl: "https://solidguard.app",
+    displayUrl: "https://solidguard.app",
   },
   {
     title: "Billable",
@@ -40,7 +44,7 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL", "shadcn/ui", "Resend", "jsPDF"],
     liveUrl: "https://hourly-halo.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/hourly-halo",
-    iframeUrl: "https://hourly-halo.app",
+    displayUrl: "https://hourly-halo.app",
   },
   {
     title: "StockGPT",
@@ -49,21 +53,31 @@ export const spotlightProjects: SpotlightProject[] = [
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Recharts", "Python", "FastAPI", "Pydantic", "SEC EDGAR API", "Claude API", "Vercel", "Railway"],
     liveUrl: "https://stock-gpt-five.vercel.app",
     githubUrl: "https://github.com/NickMJohnson/StockGPT",
-    iframeUrl: "https://stock-gpt.app",
+    displayUrl: "https://stock-gpt.app",
   },
 ];
 
-const BrowserFrame = ({ url, title, scrollOffset = 0 }: { url: string; title: string; scrollOffset?: number }) => (
+const BrowserFrame = ({
+  src,
+  displayUrl,
+  title,
+  scrollOffset = 0,
+}: {
+  src: string;
+  displayUrl: string;
+  title: string;
+  scrollOffset?: number;
+}) => (
   <div className="browser-chrome relative scanlines">
     <div className="browser-chrome-bar">
       <div className="browser-dot bg-destructive/60" />
       <div className="browser-dot bg-neon-amber/60" />
       <div className="browser-dot bg-primary/60" />
-      <span className="ml-3 text-xs text-muted-foreground truncate font-mono">{url}</span>
+      <span className="ml-3 text-xs text-muted-foreground truncate font-mono">{displayUrl}</span>
     </div>
     <div className="hidden md:block overflow-hidden aspect-video">
       <iframe
-        src={url}
+        src={src}
         title={title}
         className="w-[200%] border-0"
         style={{
@@ -77,7 +91,7 @@ const BrowserFrame = ({ url, title, scrollOffset = 0 }: { url: string; title: st
     </div>
     <div className="md:hidden">
       <a
-        href={url}
+        href={src}
         target="_blank"
         rel="noopener noreferrer"
         className="block aspect-video bg-muted/30 flex items-center justify-center text-xs font-mono text-primary hover:text-foreground transition-colors"
@@ -111,7 +125,12 @@ export const SpotlightSection = () => {
                   reversed && "md:[direction:rtl] md:[&>*]:[direction:ltr]"
                 )}
               >
-                <BrowserFrame url={project.iframeUrl} title={project.title} scrollOffset={project.iframeScrollOffset} />
+                <BrowserFrame
+                  src={project.liveUrl}
+                  displayUrl={project.displayUrl ?? project.liveUrl}
+                  title={project.title}
+                  scrollOffset={project.iframeScrollOffset}
+                />
                 <div className="flex flex-col justify-center cyber-card">
                   <h4 className="text-lg font-display font-semibold text-foreground mb-2">{project.title}</h4>
                   <p className="text-xs text-muted-foreground mb-4 leading-relaxed font-mono">{project.description}</p>
