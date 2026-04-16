@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# Retro Portfolio
 
-## Project info
+My personal portfolio site — a single-page retro/cyber-themed build with featured project spotlights, an AI chat assistant grounded in my background, a contact form, and an animated hero. Live at **[nickjohnson.site](https://nickjohnson.site)**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Stack
 
-## How can I edit this code?
+- **Frontend:** React 18 + TypeScript + Vite, Tailwind CSS, shadcn/ui, Framer Motion, React Router
+- **API:** Vercel serverless functions (TypeScript) in `/api`
+- **AI chat:** Anthropic Claude (`claude-haiku-4-5`) via `@anthropic-ai/sdk`
+- **Email:** Resend (verified sender on `nickjohnson.site`)
+- **Hosting / analytics:** Vercel + `@vercel/analytics`
+- **Tests:** Vitest (unit) + Playwright (e2e)
 
-There are several ways of editing your application.
+## Architecture
 
-**Use Lovable**
+Single-page layout composed of section components in `src/components/`:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+| Section | Source |
+| --- | --- |
+| Header / nav | `Header.tsx` |
+| Hero (typing-glitch name reveal) | `HeroSection.tsx` |
+| About + skills | `AboutSection.tsx` |
+| Featured spotlights with live iframe previews | `SpotlightSection.tsx` |
+| Full project grid with category filter | `ProjectsSection.tsx` |
+| Resume timeline | `ResumeSection.tsx` |
+| AI chat (Claude-powered) | `ChatSection.tsx` |
+| Contact form | `ContactSection.tsx` |
 
-Changes made via Lovable will be committed automatically to this repo.
+Two serverless endpoints back the interactive pieces:
 
-**Use your preferred IDE**
+- `api/chat.ts` — proxies user messages to Claude with a system prompt that encodes my bio, projects, and experience. Also forwards each Q&A to my inbox via Resend.
+- `api/contact.ts` — sends contact-form submissions to my inbox with `replyTo` set to the sender.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Client-side, the chat is rate-limited to 5 queries per day via `localStorage`.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Local development
 
-Follow these steps:
+Requires Node 18+ and [Bun](https://bun.sh) (or npm).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+bun install
+bun run dev        # http://localhost:5173
 ```
 
-**Edit a file directly in GitHub**
+The serverless API routes run under `vercel dev`:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+vercel dev
+```
 
-**Use GitHub Codespaces**
+Environment variables (required for the API):
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+ANTHROPIC_API_KEY=...
+RESEND_API_KEY=...
+```
 
-## What technologies are used for this project?
+## Scripts
 
-This project is built with:
+```sh
+bun run dev          # Vite dev server
+bun run build        # production build
+bun run preview      # preview the production build
+bun run lint         # eslint
+bun run test         # vitest (run once)
+bun run test:watch   # vitest watch mode
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Playwright is configured in `playwright.config.ts`; run with `bunx playwright test`.
 
-## How can I deploy this project?
+## Deploy
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Deployed on Vercel. `main` auto-deploys to production; PRs get preview URLs. The `/api` directory is picked up as serverless functions automatically. Custom domain is configured in the Vercel project settings.
 
-## Can I connect a custom domain to my Lovable project?
+## Engineering notes
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Selected gotchas I hit while building this are documented in [`notes.md`](./notes.md) — including the Vercel fire-and-forget async bug that made chat notification emails flaky, a CSS `transform` ordering issue that broke the iframe scroll offset, and a `scrollIntoView` call that hijacked the initial page scroll.
