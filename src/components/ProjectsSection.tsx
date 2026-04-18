@@ -15,6 +15,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Personal CRM Agent",
+    description: "LLM-powered personal CRM that auto-ingests Granola meeting notes into Supabase, remembers people and commitments, and texts you via iMessage — daily briefings with birthdays and follow-ups, pre-meeting attendee dossiers, and natural-language queries like \"what do I know about Jane?\"",
+    tech: ["Python", "Ara SDK", "LLM Agents", "Tool Calling", "Supabase", "PostgreSQL", "Zapier Webhooks", "Google Calendar API", "iMessage", "Serverless"],
+    categories: ["AI/ML"],
+    github: "https://github.com/NickMJohnson/Personal_CRM",
+  },
+  {
     title: "Cornell Rocketry Autopilot",
     description: "GPS-guided parafoil autopilot running on embedded hardware, using sensor fusion of barometric and GPS altitude data to navigate a deployable glider back to a home coordinate.",
     tech: ["C++", "Arduino", "Embedded Systems", "GPS", "Sensor Fusion", "PID Control", "TinyGPS++", "PWM Servos"],
