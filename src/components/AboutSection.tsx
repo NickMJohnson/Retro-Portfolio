@@ -49,7 +49,7 @@ export const AboutSection = () => {
               className="leading-relaxed text-base"
             />
             <WordReveal
-              text="Outside of code I'm into drone racing, model aviation, and guitar. I care a lot about making things that actually work and that people actually want to use."
+              text="Outside of code I'm into drone racing, model aviation, and guitar. I care a lot about making things that people actually want to use."
               className="leading-relaxed text-base"
             />
           </div>
