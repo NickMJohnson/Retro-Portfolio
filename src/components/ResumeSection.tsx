@@ -14,7 +14,6 @@ const TimelineBlock = ({ items, label }: { items: TimelineItem[]; label: string 
               className="absolute left-0 top-1.5 w-[11px] h-[11px] border-2 border-primary bg-background"
               style={{ boxShadow: "0 0 8px hsla(var(--neon-cyan) / 0.6)" }}
             />
-            <p className="text-xs text-muted-foreground font-mono mb-1">{item.period}</p>
             <h4 className="font-medium text-foreground text-sm">{item.title}</h4>
             <p className="text-xs text-primary font-mono mb-1">{item.organization}</p>
             {Array.isArray(item.description) ? (
