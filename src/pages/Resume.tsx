@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Download, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 import {
+  additionalExperience,
   education,
   experience,
+  interests,
   leadership,
   projects,
   skillGroups,
@@ -18,7 +20,12 @@ const TimelineBlock = ({ items }: { items: TimelineItem[] }) => (
       <article key={`${item.organization}-${i}`} className="border-l-2 border-primary/40 pl-4">
         <p className="text-xs font-mono text-muted-foreground mb-1">{item.period}</p>
         <h3 className="font-medium text-foreground text-sm">{item.title}</h3>
-        <p className="text-xs text-primary font-mono mb-1.5">{item.organization}</p>
+        <p className="text-xs text-primary font-mono mb-1.5">
+          {item.organization}
+          {item.location && (
+            <span className="text-muted-foreground"> · {item.location}</span>
+          )}
+        </p>
         {Array.isArray(item.description) ? (
           <ul className="space-y-1 mt-2">
             {item.description.map((point, j) => (
@@ -175,6 +182,13 @@ const Resume = () => {
 
           <section className="mb-10">
             <h2 className="text-xs font-mono text-primary uppercase tracking-wider mb-4">
+              &gt; additional experience
+            </h2>
+            <TimelineBlock items={additionalExperience} />
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xs font-mono text-primary uppercase tracking-wider mb-4">
               &gt; leadership
             </h2>
             <TimelineBlock items={leadership} />
@@ -196,6 +210,15 @@ const Resume = () => {
                 </div>
               ))}
             </div>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xs font-mono text-primary uppercase tracking-wider mb-4">
+              &gt; interests
+            </h2>
+            <p className="text-xs text-foreground font-mono leading-relaxed">
+              {interests.join(" · ")}
+            </p>
           </section>
         </article>
 
