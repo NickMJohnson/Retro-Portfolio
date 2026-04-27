@@ -81,7 +81,7 @@ export const additionalExperience: TimelineItem[] = [
 
 export const education: TimelineItem[] = [
   {
-    period: "2021 — May 2026",
+    period: "May 2026",
     title: "B.E. Computer Science",
     organization: "Cornell University, College of Engineering",
     location: "Ithaca, NY",
