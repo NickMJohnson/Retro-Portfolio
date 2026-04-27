@@ -114,7 +114,7 @@ export const leadership: TimelineItem[] = [
 
 export const projects: ResumeProject[] = [
   {
-    period: "Jan 2026 — Apr 2026",
+    period: "Jan 2026 — May 2026",
     title: "Clairvoyant Crime Detection",
     tagline:
       "AI-powered video surveillance search engine built with React, TypeScript, and FastAPI. Natural language queries across multi-camera feeds with sub-300ms retrieval via pgvector ANN search, plus a cross-camera entity re-identification system with confidence scoring and real-time clip playback.",
@@ -132,7 +132,7 @@ export const projects: ResumeProject[] = [
     link: "https://clairvoyant-rouge.vercel.app",
   },
   {
-    period: "Jan 2025 — May 2025",
+    period: "Sep 2025 — Jan 2026",
     title: "Solid-Guard",
     tagline:
       "Smart-contract security tool built for Cornell's Explorations in ML course. Engineered a reproducible dataset pipeline that generates paired malicious and safe Solidity contracts, runs Slither static analysis, and analyzes for common attack vulnerabilities.",
