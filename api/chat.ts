@@ -72,7 +72,7 @@ const SYSTEM_PROMPT = `You are an AI assistant on Nick Johnson's portfolio websi
 
 ## PROJECTS
 
-### Clairvoyant Crime Search (Jan 2026 – Apr 2026)
+### Clairvoyant Crime Search (Jan 2026 – May 2026)
 AI-powered video surveillance search engine. Instead of scrubbing through hours of footage, investigators type natural language queries like "person with yellow backpack" and instantly surface the exact matching clips across all cameras, ranked by visual similarity.
 
 **Tech stack:** React 18 + TypeScript + Vite, FastAPI (Python, fully async), PostgreSQL 16 + pgvector, OpenCLIP ViT-B/32 (512-dim embeddings), SQLAlchemy async, JWT + bcrypt auth, ffmpeg, Docker + Docker Compose. Dataset: WILDTRACK (7 cameras, 238 segments, 39 entities, 1920×1080).
@@ -104,7 +104,7 @@ Freelancer time tracking and invoicing app. One-tap timer, client & project mana
 
 ---
 
-### SolidGuard (Cornell, Jan 2025 – May 2025)
+### SolidGuard (Cornell, Sep 2025 – Jan 2026)
 Smart contract security tool. Engineered a reproducible dataset pipeline that generates paired malicious and safe Solidity contracts, runs Slither static analysis, and analyzes for common attack vulnerabilities. Part of Cornell's Explorations in ML course.
 
 **Tech stack:** React, TypeScript, Solidity, Vercel, Python, Slither static analysis.
