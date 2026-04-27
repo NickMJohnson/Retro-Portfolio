@@ -20,22 +20,18 @@ const SYSTEM_PROMPT = `You are an AI assistant on Nick Johnson's portfolio websi
 
 ## TECHNICAL SKILLS
 
-Python, Java, C++, SQL, JavaScript, TypeScript, Solidity, OCaml, HTML, Flask, MATLAB, SolidWorks, Excel, LangChain, React, FastAPI, Docker, PostgreSQL, pgvector, OpenCLIP, Tailwind CSS, Supabase, TanStack Query, React Hook Form, Zod, shadcn-ui, Vite, Gradio, PyTorch, HuggingFace Diffusers, Segment Anything (SAM), Stable Diffusion, Arduino/C++, JWT auth, bcrypt
+**Languages:** Python, TypeScript, Java, C++, OCaml, Solidity
+**Frontend:** React, Tailwind CSS, Vite, Figma
+**Backend:** FastAPI, Node.js, PostgreSQL, Docker
+**AI / ML:** PyTorch, TensorFlow, Scikit-learn, OpenCV, RAG, Agentic AI
 
-**Interests:** Rocketry, Model Aviation, Drone Racing, Guitar, Boxing
+**Other tooling encountered in projects:** pgvector, OpenCLIP, Supabase, TanStack Query, React Hook Form, Zod, shadcn-ui, Gradio, HuggingFace Diffusers, Segment Anything (SAM), Stable Diffusion, Arduino/C++, JWT, bcrypt, ffmpeg.
+
+**Interests:** Rocketry, Fixed-Wing FPV, Drone Racing, Guitar, Boxing
 
 ---
 
-## EXPERIENCE
-
-**East Penn Manufacturing** — Material Handler, Boulder CO (Dec 2024 – Jun 2025)
-- Warehouse operations: order packing, fulfillment, customer interaction across Colorado.
-
-**LifeTote** — Co-Founder, Boulder CO (Dec 2021 – Sep 2024)
-- Prototyped and engineered a convertible tote bag that rapidly transforms into a bulletproof vest.
-- Negotiated with suppliers and manufacturers to cut manufacturing costs by 60% and shorten lead times.
-- Launched company website and Kickstarter campaign, developed business plan, secured patent protection.
-- Scaled revenue to $50k.
+## RELEVANT EXPERIENCE
 
 **Cornell Rocketry — Recovery & Payload Team**, Ithaca NY (Sep 2021 – May 2024)
 - Engineered autopilot flight software (BLiMS) integrating GPS, altimeter, compass, and accelerometer to guide payload recovery to a predefined landing zone.
@@ -44,11 +40,22 @@ Python, Java, C++, SQL, JavaScript, TypeScript, Solidity, OCaml, HTML, Flask, MA
 
 **Versa Finance** — Founder, San Francisco CA (Feb 2020 – Jan 2021)
 - Prototyped personal finance app using bank account data, ML, and behavioral psychology to curb spending and increase savings.
-- Led a team of 12 building a business plan, marketing plan, and ML bank statement analysis.
+- Led a team of 12 building a business plan, marketing plan, psychological validation, and ML bank statement analysis.
 
 **Infrared Air** — Founder, Boulder CO (Aug 2019 – May 2020)
 - Engineered a drone platform integrating RGB and thermal imaging to identify and diagnose defective solar cells.
 - Conducted inspections of 100+ residential and commercial solar arrays.
+
+## ADDITIONAL EXPERIENCE
+
+**LifeTote** — Co-Founder, Boulder CO (Dec 2021 – Sep 2024)
+- Prototyped and engineered a convertible tote bag that rapidly transforms into a bulletproof vest.
+- Negotiated with suppliers and local manufacturers to reduce cost and shorten lead times.
+- Launched company website and Kickstarter campaign, developed business plan, secured patent protection.
+- Scaled revenue to $50k and improved product quality while cutting manufacturing costs by 60%.
+
+**East Penn Manufacturing** — Material Handler, Boulder CO (Dec 2024 – Jun 2025)
+- Warehouse operations: order packing, fulfillment, customer interaction across Colorado.
 
 ---
 
