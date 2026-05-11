@@ -115,6 +115,14 @@ const projects: Project[] = [
     demo: "https://dentalfinancing.vercel.app",
     github: "https://github.com/NickMJohnson/Financing-Calc",
   },
+  {
+    title: "MealMap",
+    description: "Recipe search and recommendation web app combining TF-IDF and truncated-SVD retrieval with LLM-refined queries, RAG-style grounded answers, and rank-fusion ranking across nutrition profiles (keto, high-protein, low-sodium, etc.) to surface dishes matching a user's dietary goals.",
+    tech: ["Python", "Flask", "scikit-learn", "TF-IDF", "Truncated SVD", "RAG", "Cosine Similarity", "Rank Fusion", "Pandas", "JavaScript", "SVG Radar Visualization"],
+    categories: ["AI/ML", "Web Dev"],
+    demo: "https://mealmap.4300showcase.infosci.cornell.edu",
+    github: "https://github.com/ArihantSwain/MealMap",
+  },
 ];
 
 const categories = ["All", "AI/ML", "Web Dev", "Systems"];
