@@ -107,6 +107,14 @@ const projects: Project[] = [
     categories: ["AI/ML"],
     github: "https://github.com/NickMJohnson/RAG-tutuor-bot",
   },
+  {
+    title: "Dental Treatment Financing Calculator",
+    description: "Chairside calculator for dental offices: clinicians adjust treatment cost and insurance coverage on the left while patients see large, high-contrast results on the right, with a print stylesheet that turns the same screen into a take-home payment plan summary.",
+    tech: ["TypeScript", "React", "Vite", "Vitest", "Branded Types", "Vercel"],
+    categories: ["Web Dev"],
+    demo: "https://dentalfinancing.vercel.app",
+    github: "https://github.com/NickMJohnson/Financing-Calc",
+  },
 ];
 
 const categories = ["All", "AI/ML", "Web Dev", "Systems"];
