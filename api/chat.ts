@@ -23,7 +23,7 @@ const SYSTEM_PROMPT = `You are an AI assistant on Nick Johnson's portfolio websi
 **Languages:** Python, TypeScript, Java, C++, OCaml, Solidity
 **Frontend:** React, Tailwind CSS, Vite, Figma
 **Backend:** FastAPI, Node.js, PostgreSQL, Docker
-**AI / ML:** PyTorch, TensorFlow, Scikit-learn, OpenCV, RAG, Agentic AI
+**AI / ML:** PyTorch, TensorFlow, Scikit-learn, OpenCV, RAG
 
 **Other tooling encountered in projects:** pgvector, OpenCLIP, Supabase, TanStack Query, React Hook Form, Zod, shadcn-ui, Gradio, HuggingFace Diffusers, Segment Anything (SAM), Stable Diffusion, Arduino/C++, JWT, bcrypt, ffmpeg.
 

@@ -44,7 +44,7 @@ const projects: Project[] = [
     github: "https://github.com/NickMJohnson/proj-01-dank-corgi",
   },
   {
-    title: "Personal CRM Agent",
+    title: "Personal AI CRM",
     description: "LLM-powered personal CRM that auto-ingests Granola meeting notes into Supabase, remembers people and commitments, and texts you via iMessage — daily briefings with birthdays and follow-ups, pre-meeting attendee dossiers, and natural-language queries like \"what do I know about Jane?\"",
     tech: ["Python", "Ara SDK", "LLM Agents", "Tool Calling", "Supabase", "PostgreSQL", "Zapier Webhooks", "Google Calendar API", "iMessage", "Serverless"],
     categories: ["AI/ML"],

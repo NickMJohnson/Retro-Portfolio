@@ -153,7 +153,7 @@ export const skillGroups: SkillGroup[] = [
   { label: "Languages", skills: ["Python", "TypeScript", "Java", "C++", "OCaml", "Solidity"] },
   { label: "Frontend", skills: ["React", "Tailwind CSS", "Vite", "Figma"] },
   { label: "Backend", skills: ["FastAPI", "Node.js", "PostgreSQL", "Docker"] },
-  { label: "AI / ML", skills: ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCV", "RAG", "Agentic AI"] },
+  { label: "AI / ML", skills: ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCV", "RAG"] },
 ];
 
 export const interests: string[] = [
