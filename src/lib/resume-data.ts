@@ -31,7 +31,7 @@ export const experience: TimelineItem[] = [
     description: [
       "Engineered autopilot flight software integrating GPS, altimeter, compass, and accelerometer data to guide payload recovery to a predefined landing zone.",
       "Designed and implemented a solar panel deployment and positioning system to recharge flight batteries.",
-      "Competed at the Spaceport America Cup.",
+      "Worked alongside a large team to win the Spaceport America Cup.",
     ],
   },
   {

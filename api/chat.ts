@@ -36,7 +36,7 @@ const SYSTEM_PROMPT = `You are an AI assistant on Nick Johnson's portfolio websi
 **Cornell Rocketry — Recovery & Payload Team**, Ithaca NY (Sep 2021 – May 2024)
 - Engineered autopilot flight software (BLiMS) integrating GPS, altimeter, compass, and accelerometer to guide payload recovery to a predefined landing zone.
 - Designed and implemented a solar panel deployment and positioning system to recharge flight batteries.
-- Competed at the Spaceport America Cup.
+- Worked alongside a large team to win the Spaceport America Cup.
 
 **Versa Finance** — Founder, San Francisco CA (Feb 2020 – Jan 2021)
 - Prototyped personal finance app using bank account data, ML, and behavioral psychology to curb spending and increase savings.
