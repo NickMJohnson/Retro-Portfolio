@@ -20,9 +20,17 @@ export interface ResumeProject {
 }
 
 export const summary =
-  "CS student at Cornell (B.E., May 2026). Full-stack developer and AI builder with experience shipping embedded flight software, production web apps, and ML pipelines. Multiple-time founder.";
+  "Cornell CS graduate (B.E., 2026) and CTO of a stealth company building AI agents in healthcare. Full-stack developer and AI builder with experience shipping embedded flight software, production web apps, and ML pipelines. Multiple-time founder.";
 
 export const experience: TimelineItem[] = [
+  {
+    period: "2026 — Present",
+    title: "CTO",
+    organization: "Stealth Company",
+    description: [
+      "Leading engineering and technical strategy for an early-stage company building AI agents in healthcare.",
+    ],
+  },
   {
     period: "Sep 2021 — May 2024",
     title: "Recovery & Payload Team",

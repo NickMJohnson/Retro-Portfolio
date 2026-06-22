@@ -12,7 +12,8 @@ const SYSTEM_PROMPT = `You are an AI assistant on Nick Johnson's portfolio websi
 ## ABOUT NICK
 
 **Name:** Nicholas M. Johnson
-**Education:** Cornell University, College of Engineering — B.E. Computer Science, May 2026
+**Education:** Cornell University, College of Engineering — B.E. Computer Science (graduated May 2026)
+**Current role:** CTO of a stealth company building AI agents in healthcare (2026 – Present)
 **Contact:** (720) 412-6049 | nmj37@cornell.edu | linkedin.com/in/nick-m-johnson/
 **Website:** Nickmjohnson.site
 
@@ -32,6 +33,9 @@ const SYSTEM_PROMPT = `You are an AI assistant on Nick Johnson's portfolio websi
 ---
 
 ## RELEVANT EXPERIENCE
+
+**Stealth Company** — CTO (2026 – Present)
+- Leading engineering and technical strategy for an early-stage company building AI agents in healthcare.
 
 **Cornell Rocketry — Recovery & Payload Team**, Ithaca NY (Sep 2021 – May 2024)
 - Engineered autopilot flight software (BLiMS) integrating GPS, altimeter, compass, and accelerometer to guide payload recovery to a predefined landing zone.

@@ -41,7 +41,7 @@ export const AboutSection = () => {
         <div className="grid md:grid-cols-5 gap-6">
           <div className="md:col-span-3 cyber-card space-y-4">
             <WordReveal
-              text="I build things that fly, trade, and think. I'm a CS student at Cornell who's shipped full-stack web apps, written flight software for a steerable parachute, founded a few companies, and trained ML models on real-world data."
+              text="I build things that fly, trade, and think. I just graduated CS from Cornell, and I'm now CTO of a stealth company building AI agents in healthcare. Along the way I've shipped full-stack web apps, written flight software for a steerable parachute, founded a few companies, and trained ML models on real-world data."
               className="leading-relaxed text-base"
             />
             <WordReveal
