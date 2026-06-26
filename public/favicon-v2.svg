@@ -1,19 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="6" fill="#080b0f"/>
+  <rect width="32" height="32" rx="6" fill="#0a0e16"/>
   <defs>
-    <linearGradient id="grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#00ffea"/>
-      <stop offset="100%" stop-color="#ff33cc"/>
+    <linearGradient id="grad" x1="5" y1="7" x2="27" y2="25" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4df3ff"/>
+      <stop offset="100%" stop-color="#ff5ad6"/>
     </linearGradient>
   </defs>
   <text
     x="16"
-    y="23"
+    y="24"
     text-anchor="middle"
-    font-family="'Arial', sans-serif"
+    font-family="Arial, Helvetica, sans-serif"
     font-weight="700"
-    font-size="16"
+    font-size="21"
+    letter-spacing="-1.5"
     fill="url(#grad)"
-    letter-spacing="-0.5"
+    stroke="url(#grad)"
+    stroke-width="0.9"
+    stroke-linejoin="round"
   >NJ</text>
 </svg>
