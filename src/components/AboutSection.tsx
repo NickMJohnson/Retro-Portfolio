@@ -41,11 +41,11 @@ export const AboutSection = () => {
         <div className="grid md:grid-cols-5 gap-6">
           <div className="md:col-span-3 cyber-card space-y-4">
             <WordReveal
-              text="I build things that fly, trade, and think. I just graduated CS from Cornell, and I'm now CTO of a stealth company building AI agents in healthcare. Along the way I've shipped full-stack web apps, written flight software for a steerable parachute, founded a few companies, and trained ML models on real-world data."
+              text="Hi I'm Nick. I build things that fly, trade and think. Cornell CS alum and currently CTO of a venture backed startup building agents in healthcare. I've bounced around from embedded flight software to production web apps and ML models."
               className="leading-relaxed text-base"
             />
             <WordReveal
-              text="At Cornell Rocketry I worked on an autopilot system to guide our payload back to the launch site. Before that I started Infrared Air to inspect solar arrays with drones, and LifeTote to build a bag that converts into a bulletproof vest. I tend to find my way into weird, ambitious projects."
+              text="At Cornell Rocketry I built an autopilot system to guide our payload back to the launch site. Before that I started Infrared Air to inspect solar arrays with drones, and LifeTote to build a bag that converts into a bulletproof vest."
               className="leading-relaxed text-base"
             />
             <WordReveal

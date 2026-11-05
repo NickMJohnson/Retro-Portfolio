@@ -7,7 +7,7 @@ export const Footer = () => (
         <a href="https://github.com/NickMJohnson" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">github.com/NickMJohnson</a>
       </div>
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
-        <p className="text-xs text-muted-foreground font-mono">© {new Date().getFullYear()} Nick Johnson. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground font-mono">© 2023 Nick Johnson. All rights reserved.</p>
         <p className="text-xs text-muted-foreground font-mono">Built with React + Tailwind · <span className="neon-text">system_online</span></p>
       </div>
     </div>
