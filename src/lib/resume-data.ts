@@ -137,7 +137,7 @@ export const projects: ResumeProject[] = [
       "Docker",
       "ffmpeg",
     ],
-    link: "https://clairvoyant-rouge.vercel.app",
+    link: "https://clairvoyantai.net",
   },
   {
     period: "Sep 2025 — Jan 2026",

@@ -23,9 +23,9 @@ export const spotlightProjects: SpotlightProject[] = [
     description:
       "AI-powered video search engine that lets investigators query surveillance footage in natural language — type \"person with yellow backpack\" and instantly surface the exact clips, across all cameras, ranked by visual similarity.",
     tech: ["Python", "TypeScript", "React", "FastAPI", "PostgreSQL", "pgvector", "OpenCLIP", "Docker", "Tailwind CSS", "ffmpeg"],
-    liveUrl: "https://clairvoyant-rouge.vercel.app",
+    liveUrl: "https://clairvoyantai.net",
     githubUrl: "https://github.com",
-    displayUrl: "https://clairvoyant.app",
+    displayUrl: "https://clairvoyantai.net",
     iframeScrollOffset: 710,
   },
   {
